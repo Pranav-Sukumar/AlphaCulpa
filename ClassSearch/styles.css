@@ -12,6 +12,15 @@ body {
     margin-top: 50px;
 }
 
+.karma {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    margin-bottom: 30px;
+    justify-content: right;
+    font-size: 2em;
+}
+
 .header {
     display: flex;
     justify-content: space-between;

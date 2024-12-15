@@ -1,10 +1,11 @@
 import './App.css';
 import './writereview.css'
-import { Link } from 'react-router-dom';
+import { Link , useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 
 function WriteReview({kp, setKP}) {
+    const navigate = useNavigate();
 
     const [completedQuestions, setCompletedQuestions] = useState({});
 
@@ -42,6 +43,7 @@ function WriteReview({kp, setKP}) {
         event.preventDefault();
         const totalPoints = calculateTotalPoints();
         setKP(kp + totalPoints);
+        navigate('/'); 
     };
 
     const questions = [

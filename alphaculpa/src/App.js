@@ -82,13 +82,21 @@ function App() {
     console.log("Updated JSON:", JSON.stringify(updatedData, null, 2));
   };
 
+  function getAvailableClasses() {
+    return data.map(item => ({
+      id: item.classId,
+      name: item.className
+    }));
+  }
+  
+
   return (
     <Router>
       <Routes>
         <Route path={"/"} element={<Homepage kp = {karmaPoints}/>} />
         <Route path = {"/classsearch"} element = {<ClassSearch kp = {karmaPoints} data = {data}/>} />
         <Route path = {"/classsearch/addclass"} element = {<AddClass kp = {karmaPoints} addNewClass = {addNewClass}/>} />
-        <Route path = {"/review"} element = {<WriteReview kp = {karmaPoints} setKP = {setKarmaPoints} addReview={addReview}/>} />
+        <Route path = {"/review"} element = {<WriteReview kp = {karmaPoints} setKP = {setKarmaPoints} addReview={addReview} getAvailableClasses={getAvailableClasses}/>} />
         <Route path = {"/viewclass/:class_id/:class_name/:prof_name"} element = {<ViewInformationClass kp = {karmaPoints} setKP = {setKarmaPoints} data = {data}/>} />
       </Routes>
 

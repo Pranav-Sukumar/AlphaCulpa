@@ -4,7 +4,7 @@ import { Link , useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 
-function WriteReview({kp, setKP, addReview}) {
+function WriteReview({kp, setKP, addReview, getAvailableClasses}) {
     const navigate = useNavigate();
 
     const [completedQuestions, setCompletedQuestions] = useState({});
@@ -81,6 +81,8 @@ function WriteReview({kp, setKP, addReview}) {
         { key: 'syllabus', label: 'Syllabus (10 pts)' },
     ];
 
+    const classOptions = getAvailableClasses();
+
     return (
         <div className="container_reviewpage">
             <div className="sidebar_reviewpage">
@@ -109,12 +111,17 @@ function WriteReview({kp, setKP, addReview}) {
                 <div className="form-container_reviewpage">
                     <form action = "/" method="get" className="form_reviewpage" onSubmit={SubmitButtonPressed}>
                         <label for="class-select">Select the class you want to provide information for:</label>
-                        <select id="class-select" name="class" onChange={(e) => handleAnswerChange('class', e.target.value) }>
+                        <select 
+                            id="class-select" 
+                            name="class" 
+                            onChange={(e) => handleAnswerChange('class', e.target.value)}
+                        >
                             <option value="">Select</option>
-                            <option value="COMS W3134">Data Structures COMS W3134</option>
-                            <option value="COMS W4771">Machine Learning COMS W4771</option>
-                            <option value="CSOR 4231">Analysis of Algorithms CSOR 4231</option>
-                            <option value="COMS W4731">Computer Vision I COMS W4731</option>
+                            {classOptions.map((option) => (
+                                <option key={option.id} value={option.id}>
+                                    {option.id} - {option.name}
+                                </option>
+                            ))}
                         </select>
 
                         <label>Would you recommend this class?</label>

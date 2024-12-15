@@ -31,7 +31,6 @@ function ClassSearch({kp, data}) {
         {data.map((dataItem, index) => (
           dataItem.professors.map((professor, profIndex) => (
             <ClassSearchTile
-              key={`${dataItem.classId}-${profIndex}`}
               class_name={dataItem.className}
               class_id={dataItem.classId}
               prof_name={professor.name}

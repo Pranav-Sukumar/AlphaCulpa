@@ -9,7 +9,7 @@ function AddClass({ kp, addNewClass }) {
   const [professorName, setProfessorName] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevents the default form submission behavior
+    e.preventDefault();
     addNewClass(professorName, courseId, className);
     setClassName('');
     setCourseId('');

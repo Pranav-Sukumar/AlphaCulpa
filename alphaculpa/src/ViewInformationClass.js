@@ -1,14 +1,47 @@
 import './App.css';
 import './view_information.css'
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 
 
-function ViewInformationClass({kp, setKP}) {
-  const { prof_name } = useParams();
+function ViewInformationClass({kp, setKP, data}) {
+  const { class_id, class_name, prof_name } = useParams();
   console.log(prof_name)
   const [isExpanded, setIsExpanded] = useState(false);
+
+
+  const [isSyllabusLocked, setIsSyllabusLocked] = useState(true);
+  const [isLectureStyleLocked, setIsLectureStyleLocked] = useState(true);
+  const [isGradeDataLocked, setIsGradeDataLocked] = useState(true);
+  const [isReviewsDataLocked, setIsReviewsDataLocked] = useState(true);
+  
+
+  useEffect(() => {
+    const classData = data.find(
+      (item) => item.classId === class_id && item.className === class_name
+    );
+
+    if (classData) {
+      const professor = classData.professors.find((prof) => prof.name === prof_name);
+
+      if (professor && professor.syllabus) {
+        setIsSyllabusLocked(professor.syllabus.unlocked);
+      }
+      if (professor && professor.lectureStyle) {
+        setIsLectureStyleLocked(professor.lectureStyle.unlocked);
+      }
+      if (professor && professor.gradeData) {
+        setIsGradeDataLocked(professor.gradeData.unlocked);
+      }
+      if (professor && professor.reviews) {
+        setIsReviewsDataLocked(professor.reviews.unlocked);
+      }
+    }
+  }, [class_id, class_name, prof_name, data]);
+
+
+
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
@@ -23,7 +56,7 @@ function ViewInformationClass({kp, setKP}) {
         <div class="karma-points-vi">{kp} Karma points</div>
       </div>
       <div class="info-vi">
-        <div class="coursename-vi">COMS 4731 Computer Vision Ⅱ</div>
+        <div class="coursename-vi">{class_id} {class_name}</div>
         <hr />
         <div class="subinfo-vi">
           <div class="profname-vi">Professor: {prof_name}</div>
@@ -44,7 +77,11 @@ function ViewInformationClass({kp, setKP}) {
               >
                 {isExpanded ? 'CLOSE' : 'VIEW'}
               </button>
-              <img class="lockimage-vi" src={require(`./images/unlock.png`)} alt="Unlock Image" />
+              <img 
+                class="lockimage-vi" 
+                src={require(`./images/${isSyllabusLocked ? 'unlock.png' : 'lock.png'}`)} 
+                alt={isSyllabusLocked ? "Unlock Image" : "Lock Image"} 
+                />
             </div>
           </div>
           <div class={`section-info-vi ${isExpanded ? 'expanded' : ''}`}>
@@ -60,7 +97,11 @@ function ViewInformationClass({kp, setKP}) {
             <div class="sectionname-vi">Lecture Style</div>
             <div class="right-vi">
               <button class="purchase-btn-vi">PURCHASE FOR 10 POINTS</button>
-              <img class="lockimage-vi" src={require(`./images/lock.png`)} alt="Lock Image" />
+              <img 
+                class="lockimage-vi" 
+                src={require(`./images/${isLectureStyleLocked ? 'unlock.png' : 'lock.png'}`)} 
+                alt={isLectureStyleLocked ? "Unlock Image" : "Lock Image"} 
+                />
             </div>
           </div>
           <div class="section-info-vi">
@@ -76,7 +117,11 @@ function ViewInformationClass({kp, setKP}) {
             <div class="sectionname-vi">Grade Data</div>
             <div class="right-vi">
               <button class="purchase-btn-vi">PURCHASE FOR 50 POINTS</button>
-              <img class="lockimage-vi" src={require(`./images/lock.png`)} alt="Lock Image" />
+              <img 
+                class="lockimage-vi" 
+                src={require(`./images/${isGradeDataLocked ? 'unlock.png' : 'lock.png'}`)} 
+                alt={isGradeDataLocked ? "Unlock Image" : "Lock Image"} 
+                />
             </div>
           </div>
           <div class="section-info-vi">
@@ -92,7 +137,11 @@ function ViewInformationClass({kp, setKP}) {
             <div class="sectionname-vi">Reviews</div>
             <div class="right-vi">
               <button class="purchase-btn-vi">PURCHASE FOR 30 POINTS</button>
-              <img class="lockimage-vi" src={require(`./images/lock.png`)} alt="Lock Image" />
+              <img 
+                class="lockimage-vi" 
+                src={require(`./images/${isReviewsDataLocked ? 'unlock.png' : 'lock.png'}`)} 
+                alt={isReviewsDataLocked ? "Unlock Image" : "Lock Image"} 
+                />
             </div>
           </div>
           <div class="section-info-vi">

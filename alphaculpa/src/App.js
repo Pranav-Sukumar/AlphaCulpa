@@ -25,7 +25,7 @@ function App() {
           "name": prof_name,
           "syllabus": {
             "content": "",
-            "unlocked": true
+            "unlocked": false
           },
           "lectureStyle": {
             "content": {
@@ -37,7 +37,7 @@ function App() {
           },
           "gradeData": {
             "content": "",
-            "unlocked": false
+            "unlocked": true
           },
           "reviews": {
             "content": [],
@@ -46,8 +46,6 @@ function App() {
         }
       ]
     }
-
-    console.log(newItem)
 
     newData = [...newData, newItem]
 
@@ -65,7 +63,7 @@ function App() {
         <Route path = {"/classsearch"} element = {<ClassSearch kp = {karmaPoints} data = {data}/>} />
         <Route path = {"/classsearch/addclass"} element = {<AddClass kp = {karmaPoints} addNewClass = {addNewClass}/>} />
         <Route path = {"/review"} element = {<WriteReview kp = {karmaPoints} setKP = {setKarmaPoints}/>} />
-        <Route path = {"/viewclass/:prof_name"} element = {<ViewInformationClass kp = {karmaPoints} setKP = {setKarmaPoints}/>} />
+        <Route path = {"/viewclass/:class_id/:class_name/:prof_name"} element = {<ViewInformationClass kp = {karmaPoints} setKP = {setKarmaPoints} data = {data}/>} />
       </Routes>
 
       

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 function ClassSearch({class_name, class_id, prof_name}) {
-  const path = "/viewclass/" + prof_name
+  const path = "/viewclass/" + class_id + "/" + class_name  + "/" + prof_name
   return (
 
     <div class="card">

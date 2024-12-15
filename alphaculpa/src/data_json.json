@@ -49,6 +49,54 @@
 
 
     {
+      "classId": "COMS 4113",
+      "className": "Fundamentals of Distributed Systems",
+      "professors": [
+        {
+          "name": "Roxana Geambasu",
+          "syllabus": {
+            "content": {
+              "Topic": "Distributed systems help programmers aggregate the resources of many networked computers to construct highly available and scalable services. Most of the applications and services we interact with today are distributed, some at enormous scales. This class teaches design and implementation techniques that enable the building of fast, scalable, fault-tolerant distributed systems. Topics include distributed communication models (e.g., sockets, remote procedure calls, distributed shared memory), distributed synchronization (clock synchronization, logical clocks, distributed mutex), distributed file systems, replication, consistency models, fault tolerance, distributed transactions, agreement and commitment, Paxos-based consensus, MapReduce infrastructures, scalable distributed databases. The class combines concepts and algorithms with descriptions of real-world implementations at Google, Facebook, Yahoo, Microsoft, LinkedIn, etc. In addition to lectures, students will get hands-on experience building distributed systems through a series of coding-oriented homeworks. The series, adopted from MIT’s course, implements a fault-tolerant, sharded key/value store.",
+              "Grading": "The grade will be assigned on performance of five homeworks and a final exam. Additionally, a 10% extra credit may be awarded to students with significant and particularly insightful contributions on ED and/or in class throughout the semester. There is no specific number of these awards, but you should think of awardees as people who have stood out consistently and have improved the class in some significant way. Finally, a 10% extra credit is given to students who complete and score perfectly on all eight homework components. The first lecture details the grading procedure, and the Deadlines page specifies the deadlines/dates of each homework/quiz.",
+              "Exam Dates": "",
+              "Lecture Schedule": "Week 1: Course Introduction. Week 2: Distributed Systems Primer. Week 3: Distributed Computation. Week 4: Communication Models. Week 5: Time and Coordination. Week 6: Agreement in Distributed Systems."
+            },
+            "unlocked": true
+          },
+          "lectureStyle": {
+            "content": {
+              "style": "Lecture-based format using handout pdf slides",
+              "recording": "Yes",
+              "prerequisites": ["COMS W3137 Data Structures and Algorithms", "COMS W3157 Advanced Programming", "COMS W3827 Fundamentals of Computer Systems", "W4118 Operating Systems is not required, but it is a big plus for your homework assignments"]
+            },
+            "unlocked": false
+          },
+          "gradeData": {
+            "content": "A plot saved here",
+            "unlocked": false
+          },
+          "reviews": {
+            "content": [
+              {
+                "id": 1,
+                "recommendation": "Definitely will",
+                "pace": "Much too fast",
+                "difficulty": "Extremely challenging",
+                "usefulness": "Extremely useful",
+                "delivery": "Excellent",
+                "liked": "I like this course a lot",
+                "disliked": "I hate this course",
+                "grade": "A-"
+              }
+            ],
+            "unlocked": false
+          }
+        }
+      ]
+    },
+
+
+    {
       "classId": "CSOR 4231",
       "className": "Analysis of Algorithms I",
       "professors": [

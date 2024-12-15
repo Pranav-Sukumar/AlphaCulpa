@@ -25,7 +25,7 @@ function App() {
           "name": prof_name,
           "syllabus": {
             "content": "",
-            "unlocked": false
+            "unlocked": true
           },
           "lectureStyle": {
             "content": {
@@ -37,7 +37,7 @@ function App() {
           },
           "gradeData": {
             "content": "",
-            "unlocked": true
+            "unlocked": false
           },
           "reviews": {
             "content": [],

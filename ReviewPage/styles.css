@@ -1,4 +1,4 @@
-body {
+.body_reviewpage {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@ body {
     background-color: #f4f4f4;
 }
 
-.container {
+.container_reviewpage {
     display: flex;
     width: 90%;
     max-width: 1200px;
@@ -17,26 +17,26 @@ body {
     position: relative;
 }
 
-.sidebar {
+.sidebar_reviewpage {
     width: 30%;
     background-color: #ffffff;
     padding: 20px;
     border-right: 2px solid #ccc;
 }
 
-.sidebar .logo {
+.sidebar_reviewpage .logo_reviewpage {
     width: 100px;
     display: block;
     margin: 0 auto 20px;
 }
 
-.sidebar h2 {
+.sidebar_reviewpage h2 {
     font-size: 18px;
     margin-bottom: 10px;
     text-align: center;
 }
 
-.sidebar ul {
+.sidebar_reviewpage ul {
     list-style: none;
     padding: 10px;
     border: 2px solid #ccc;
@@ -44,25 +44,25 @@ body {
     background-color: #f9f9f9;
 }
 
-.sidebar ul li {
+.sidebar_reviewpage ul li {
     margin: 10px 0;
     font-size: 14px;
 }
 
-.form-section {
+.form-section_reviewpage {
     width: 70%;
     padding: 20px;
     background-color: white;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Creates spacing between the empty-space and the form-container */
+    gap: 20px;
 }
 
-.empty-space {
-    height: 50px; /* Adjust this value to control the height of the empty space */
+.empty-space_reviewpage {
+    height: 50px;
 }
 
-.karma-indicator {
+.karma-indicator_reviewpage {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -75,23 +75,23 @@ body {
     /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
 }
 
-.form-container {
+.form-container_reviewpage {
     background-color: #e7f3ff;
     padding: 10px;
     border-radius: 5px;
 }
 
-form {
+.form_reviewpage {
     display: flex;
     flex-direction: column;
 }
 
-form label {
+.form_reviewpage label {
     font-size: 14px;
     margin: 10px 0 5px;
 }
 
-form select, form textarea, form input[type="file"] {
+.form_reviewpage select, .form_reviewpage textarea, .form_reviewpage input[type="file"] {
     margin-bottom: 15px;
     padding: 8px;
     font-size: 14px;
@@ -101,22 +101,22 @@ form select, form textarea, form input[type="file"] {
     box-sizing: border-box;
 }
 
-form textarea {
+.form_reviewpage textarea {
     resize: none;
 }
 
-.checkbox-group {
+.checkbox-group_reviewpage {
     display: flex;
     align-items: center;
     margin: 10px 0;
     gap: 10px;
 }
 
-.checkbox-group input[type="checkbox"] {
+.checkbox-group_reviewpage input[type="checkbox"] {
     transform: scale(1.2);
 }
 
-button {
+.button_reviewpage {
     background-color: #151E3F;
     color: white;
     border: none;
@@ -129,6 +129,6 @@ button {
     display: block;
 }
 
-button:hover {
+.button_reviewpage:hover {
     background-color: #030027;
 }

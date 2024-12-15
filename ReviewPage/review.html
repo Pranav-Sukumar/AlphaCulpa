@@ -6,11 +6,11 @@
     <title>Class Feedback Form</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="container">
-        <div class="sidebar">
+<body class="body_reviewpage">
+    <div class="container_reviewpage">
+        <div class="sidebar_reviewpage">
             <a href="../Homepage/checkpoint4.html">
-                <img src="logo.png" alt="Logo" class="logo">
+                <img src="logo.png" alt="Logo" class="logo_reviewpage">
             </a>
             <h2>List of Questions</h2>
             <ul>
@@ -29,12 +29,12 @@
                 <li>Syllabus (10 pts)</li>
             </ul>
         </div>
-        <div class="form-section">
-            <div class="empty-space">
-                <div class="karma-indicator">20 Karma points</div>
+        <div class="form-section_reviewpage">
+            <div class="empty-space_reviewpage">
+                <div class="karma-indicator_reviewpage">20 Karma points</div>
             </div>
-            <div class="form-container">
-                <form action="../Homepage/checkpoint4.html" method="get">
+            <div class="form-container_reviewpage">
+                <form action="../Homepage/checkpoint4.html" method="get" class="form_reviewpage">
                     <label for="class-select">Select the class you want to provide information for:</label>
                     <select id="class-select" name="class">
                         <option value="">Select</option>
@@ -115,7 +115,7 @@
                     <label>What aspects of the class did you find least enjoyable? (1-3 sentences)</label>
                     <textarea rows="3"></textarea>
 
-                    <div class="checkbox-group">
+                    <div class="checkbox-group_reviewpage">
                         <label for="lectures-recorded">Are the lectures recorded?</label>
                         <input type="checkbox" id="lectures-recorded" name="lectures-recorded">
                     </div>
@@ -141,7 +141,7 @@
                     <label>Please upload the class syllabus:</label>
                     <input type="file">
 
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="button_reviewpage">Submit</button>
                 </form>
             </div>
         </div>

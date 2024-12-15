@@ -5,12 +5,24 @@ import { useState } from 'react';
 
 
 function WriteReview({kp, setKP}) {
-    function SubmitButtonPressed(event) {
-        event.preventDefault();
-        setKP(kp + 10)
-    }
 
     const [completedQuestions, setCompletedQuestions] = useState({});
+
+    const pointsMapping = {
+        class: 5,
+        recommendation: 5,
+        pace: 5,
+        difficulty: 5,
+        usefulness: 5,
+        delivery: 5,
+        professor: 5,
+        liked: 10,
+        disliked: 10,
+        recording: 5,
+        prerequisites: 5,
+        grade: 30,
+        syllabus: 10,
+    };
 
     const handleAnswerChange = (questionKey, value, type = 'input') => {
         setCompletedQuestions((prev) => ({
@@ -18,6 +30,18 @@ function WriteReview({kp, setKP}) {
             [questionKey]:
                 type === 'checkbox' ? value : (value && value !== '') || false,
         }));
+    };
+
+    const calculateTotalPoints = () => {
+        return Object.entries(completedQuestions).reduce((total, [key, isCompleted]) => {
+            return isCompleted ? total + (pointsMapping[key] || 0) : total;
+        }, 0);
+    };
+
+    const SubmitButtonPressed = (event) => {
+        event.preventDefault();
+        const totalPoints = calculateTotalPoints();
+        setKP(kp + totalPoints);
     };
 
     const questions = [

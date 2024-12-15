@@ -23,7 +23,7 @@
             "unlocked": false
           },
           "gradeData": {
-            "content": "A plot saved here",
+            "content": "./pdfs/4731_SN.pdf",
             "unlocked": false
           },
           "reviews": {
@@ -31,12 +31,12 @@
               {
                 "id": 1,
                 "recommendation": "Definitely will",
-                "pace": "Much too fast",
-                "difficulty": "Extremely challenging",
+                "pace": "Just right",
+                "difficulty": "Slightly challenging",
                 "usefulness": "Extremely useful",
                 "delivery": "Excellent",
-                "liked": "I like this course a lot",
-                "disliked": "I hate this course",
+                "liked": "I like this course a lot, Shree gives a structured course, and there are youtube videos online of the course.",
+                "disliked": "Shree doesn't like you being late to class, don't come to class if you are late.",
                 "grade": "A+"
               }
             ],
@@ -72,7 +72,7 @@
             "unlocked": false
           },
           "gradeData": {
-            "content": "A plot saved here",
+            "content": "./pdfs/4113_RG.pdf",
             "unlocked": false
           },
           "reviews": {
@@ -120,21 +120,21 @@
             "unlocked": false
           },
           "gradeData": {
-            "content": "A plot saved here",
+            "content": "./pdfs/4231_AA.pdf",
             "unlocked": false
           },
           "reviews": {
             "content": [
               {
                 "id": 1,
-                "recommendation": "Definitely will",
-                "pace": "Much too fast",
-                "difficulty": "Extremely challenging",
-                "usefulness": "Extremely useful",
-                "delivery": "Excellent",
-                "liked": "I like this course a lot",
-                "disliked": "I hate this course",
-                "grade": "A+"
+                "recommendation": "Probably won't",
+                "pace": "Slightly too fast",
+                "difficulty": "Very challenging",
+                "usefulness": "Moderately useful",
+                "delivery": "Fair",
+                "liked": "Everything is just as you expected for algos, no suprises in taking the course.",
+                "disliked": "It is a hard course.",
+                "grade": "B+"
               }
             ],
             "unlocked": false

@@ -1,9 +1,11 @@
 import './App.css';
 import './addclass.css';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 
 function AddClass({ kp, addNewClass }) {
+  const navigate = useNavigate();
+
   const [className, setClassName] = useState('');
   const [courseId, setCourseId] = useState('');
   const [professorName, setProfessorName] = useState('');
@@ -14,6 +16,8 @@ function AddClass({ kp, addNewClass }) {
     setClassName('');
     setCourseId('');
     setProfessorName('');
+
+    navigate('/classsearch')
     
   };
 

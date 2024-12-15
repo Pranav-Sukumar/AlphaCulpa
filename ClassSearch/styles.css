@@ -7,16 +7,30 @@ body {
 
 .container {
     width: 90%;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top: 50px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-radius: 5px;
+    padding: 2% 2%;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligns logo to the left and Karma Points to the right */
+    margin-bottom: 20px;
+}
+
+.logo {
+    height: 50px; /* Adjust size as needed */
+    margin-right: 10px;
 }
 
 .karma {
     display: flex;
     justify-content: space-between;
     align-items: right;
-    margin-bottom: 30px;
     justify-content: right;
     font-size: 2em;
 }
@@ -49,7 +63,7 @@ body {
     }
     
     .add-class-btn:hover { 
-        background-color: #001d4a; 
+        background-color: #030027; 
     }
     
     .grid { 

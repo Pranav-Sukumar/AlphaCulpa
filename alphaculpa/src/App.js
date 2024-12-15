@@ -88,7 +88,78 @@ function App() {
       name: item.className
     }));
   }
+
+  function unlockLectureStyle(class_id, class_name, prof_name) {
+    const updatedData = data.map(cls => {
+      if (cls.classId === class_id && cls.className === class_name) {
+        const updatedProfessors = cls.professors.map(prof => {
+          if (prof.name === prof_name) {
+            return {
+              ...prof,
+              lectureStyle: {
+                ...prof.lectureStyle,
+                unlocked: true
+              }
+            };
+          }
+          return prof;
+        });
+        return { ...cls, professors: updatedProfessors };
+      }
+      return cls;
+    });
   
+    setData(updatedData);
+    console.log("Grade data unlocked:", JSON.stringify(updatedData, null, 2));
+  }
+
+  function unlockGrade(class_id, class_name, prof_name) {
+    const updatedData = data.map(cls => {
+      if (cls.classId === class_id && cls.className === class_name) {
+        const updatedProfessors = cls.professors.map(prof => {
+          if (prof.name === prof_name) {
+            return {
+              ...prof,
+              gradeData: {
+                ...prof.gradeData,
+                unlocked: true
+              }
+            };
+          }
+          return prof;
+        });
+        return { ...cls, professors: updatedProfessors };
+      }
+      return cls;
+    });
+  
+    setData(updatedData);
+    console.log("Grade data unlocked:", JSON.stringify(updatedData, null, 2));
+  }
+  
+  function unlockReviews(class_id, class_name, prof_name) {
+    const updatedData = data.map(cls => {
+      if (cls.classId === class_id && cls.className === class_name) {
+        const updatedProfessors = cls.professors.map(prof => {
+          if (prof.name === prof_name) {
+            return {
+              ...prof,
+              reviews: {
+                ...prof.reviews,
+                unlocked: true
+              }
+            };
+          }
+          return prof;
+        });
+        return { ...cls, professors: updatedProfessors };
+      }
+      return cls;
+    });
+  
+    setData(updatedData);
+    console.log("Grade data unlocked:", JSON.stringify(updatedData, null, 2));
+  }
 
   return (
     <Router>
@@ -97,7 +168,7 @@ function App() {
         <Route path = {"/classsearch"} element = {<ClassSearch kp = {karmaPoints} data = {data}/>} />
         <Route path = {"/classsearch/addclass"} element = {<AddClass kp = {karmaPoints} addNewClass = {addNewClass}/>} />
         <Route path = {"/review"} element = {<WriteReview kp = {karmaPoints} setKP = {setKarmaPoints} addReview={addReview} getAvailableClasses={getAvailableClasses}/>} />
-        <Route path = {"/viewclass/:class_id/:class_name/:prof_name"} element = {<ViewInformationClass kp = {karmaPoints} setKP = {setKarmaPoints} data = {data}/>} />
+        <Route path = {"/viewclass/:class_id/:class_name/:prof_name"} element = {<ViewInformationClass kp = {karmaPoints} setKP = {setKarmaPoints} data = {data} unlockLectureStyle = {unlockLectureStyle} unlockGrade = {unlockGrade} unlockReviews = {unlockReviews}/>} />
       </Routes>
 
       

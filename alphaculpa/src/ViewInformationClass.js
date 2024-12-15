@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 
 
-function ViewInformationClass({kp, setKP, data}) {
+function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, unlockReviews}) {
   const { class_id, class_name, prof_name } = useParams();
   console.log(prof_name)
   const [isExpanded, setIsExpanded] = useState(false);
@@ -45,6 +45,36 @@ function ViewInformationClass({kp, setKP, data}) {
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
+  };
+
+  const unlock = (cost, unlocking) => {
+    if (cost <= kp) {
+        if (unlocking == 0 && isLectureStyleLocked == true) {
+            return
+        }
+        if (unlocking == 1 && isGradeDataLocked == true) {
+            return
+        }
+        if (unlocking == 2 && isReviewsDataLocked == true) {
+            return
+        }
+        setKP(kp - cost)
+
+        if (unlocking == 0) {
+            unlockLectureStyle(class_id, class_name, prof_name)
+        }
+
+        if (unlocking == 1) {
+            unlockGrade(class_id, class_name, prof_name)
+
+        }
+
+        if (unlocking == 2) {
+            unlockReviews(class_id, class_name, prof_name)
+        }
+
+
+    }
   };
 
   return (
@@ -96,7 +126,7 @@ function ViewInformationClass({kp, setKP, data}) {
           <div class="section-vi">
             <div class="sectionname-vi">Lecture Style</div>
             <div class="right-vi">
-              <button class="purchase-btn-vi">PURCHASE FOR 10 POINTS</button>
+              <button class="purchase-btn-vi" onClick={() => unlock(10, 0)}>PURCHASE FOR 10 POINTS</button>
               <img 
                 class="lockimage-vi" 
                 src={require(`./images/${isLectureStyleLocked ? 'unlock.png' : 'lock.png'}`)} 
@@ -116,7 +146,7 @@ function ViewInformationClass({kp, setKP, data}) {
           <div class="section-vi">
             <div class="sectionname-vi">Grade Data</div>
             <div class="right-vi">
-              <button class="purchase-btn-vi">PURCHASE FOR 50 POINTS</button>
+              <button class="purchase-btn-vi" onClick={() => unlock(50, 1)}>PURCHASE FOR 50 POINTS</button>
               <img 
                 class="lockimage-vi" 
                 src={require(`./images/${isGradeDataLocked ? 'unlock.png' : 'lock.png'}`)} 
@@ -136,7 +166,7 @@ function ViewInformationClass({kp, setKP, data}) {
           <div class="section-vi">
             <div class="sectionname-vi">Reviews</div>
             <div class="right-vi">
-              <button class="purchase-btn-vi">PURCHASE FOR 30 POINTS</button>
+              <button class="purchase-btn-vi" onClick={() => unlock(30, 2)} >PURCHASE FOR 30 POINTS</button>
               <img 
                 class="lockimage-vi" 
                 src={require(`./images/${isReviewsDataLocked ? 'unlock.png' : 'lock.png'}`)} 

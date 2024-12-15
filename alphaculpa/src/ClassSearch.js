@@ -1,6 +1,7 @@
 import './App.css';
 import './classsearch.css'
 import { Link } from 'react-router-dom';
+import ClassSearchTile from './ClassSearchTile';
 
 
 function ClassSearch({kp}) {
@@ -26,64 +27,14 @@ function ClassSearch({kp}) {
             
         </div>
         <div class="grid">
-            <div class="card">
-                <div class="card-header">CV 2 Section 1</div>
-                <div class="card-body">
-                    <p>COMS 4731</p>
-                    <p>Professor Carl Vondrik</p>
-                    <Link to="/viewclass" class="view-btn">View Information</Link>
-                </div>
-            </div>
+          <ClassSearchTile class_name = "CV 2 Section 1" class_id = "COMS 4731" prof_name = "Carl Vondrik"/>
+          <ClassSearchTile class_name = "CV 1 Section 1" class_id = "COMS todo" prof_name = "Shree Nayar"/>
+          <ClassSearchTile class_name = "Class x" class_id = "COMS todo" prof_name = "Pranav"/>
+          <ClassSearchTile class_name = "Class y" class_id = "COMS todo" prof_name = "Pranav"/>
+          <ClassSearchTile class_name = "Class z" class_id = "COMS todo" prof_name = "Pranav"/>
+          <ClassSearchTile class_name = "" class_id = "COMS todo" prof_name = "Pranav"/>
 
-            <div class="card">
-                <div class="card-header">Class 2</div>
-                <div class="card-body">
-                    <p>COMS 4731</p>
-                    <p>Professor Carl Vondrik</p>
-                    <Link to="/viewclass" class="view-btn">View Information</Link>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">Class 3</div>
-                <div class="card-body">
-                    <p>COMS 4731</p>
-                    <p>Professor Carl Vondrik</p>
-                    <Link to="/viewclass" class="view-btn">View Information</Link>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">Class 4</div>
-                <div class="card-body">
-                    <p>COMS 4731</p>
-                    <p>Professor Carl Vondrik</p>
-                    <Link to="/viewclass" class="view-btn">View Information</Link>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">Class 5</div>
-                <div class="card-body">
-                    <p>COMS 4731</p>
-                    <p>Professor Carl Vondrik</p>
-                    <Link to="/viewclass" class="view-btn">View Information</Link>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">Class 6</div>
-                <div class="card-body">
-                    <p>COMS 4731</p>
-                    <p>Professor Carl Vondrik</p>
-                    <Link to="/viewclass" class="view-btn">View Information</Link>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">Class 7</div>
-                <div class="card-body">
-                    <p>COMS 4731</p>
-                    <p>Professor Carl Vondrik</p>
-                    <Link to="/viewclass" class="view-btn">View Information</Link>
-                </div>
-            </div>
+        
         </div>
     </div>
   

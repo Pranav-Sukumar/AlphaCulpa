@@ -1,5 +1,8 @@
 import './App.css';
 import './homepage.css'
+
+import { Link } from 'react-router-dom';
+
 function Homepage() {
   return (
     <div>
@@ -13,7 +16,7 @@ function Homepage() {
           <h1>Welcome to Alpha Culpa!</h1>
           <p class="subtitle">Columbia’s anonymous professor and course rating site</p>
           <div class="button-group">
-            <a href="../ClassSearch/index.html" class="action-button">View Classes</a>
+            <Link to = "/classsearch" class="action-button">View Classes</Link>
             <a href="../ReviewPage/review.html" class="action-button">Write a Review</a>
           </div>
         </main>

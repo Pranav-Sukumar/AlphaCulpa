@@ -84,6 +84,9 @@ body {
     align-items: center;
     justify-content: space-between; /* Aligns logo to the left and Karma Points to the right */
     margin-bottom: 20px;
+    margin-top:2%;
+    margin-left:2%;
+    margin-right:2%;
 }
 
 .logo {

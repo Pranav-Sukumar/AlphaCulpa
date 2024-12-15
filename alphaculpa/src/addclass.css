@@ -5,7 +5,7 @@ body {
     background-color: #f9f9f9;
 }
 
-.container {
+.container-add-class {
     width: 90%;
     margin: 20px auto;
     background-color: white;
@@ -32,7 +32,8 @@ body {
     justify-content: space-between;
     align-items: right;
     justify-content: right;
-    font-size: 2em;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 

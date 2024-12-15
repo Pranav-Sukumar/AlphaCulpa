@@ -4,7 +4,7 @@ import { Link , useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 
-function WriteReview({kp, setKP}) {
+function WriteReview({kp, setKP, addReview}) {
     const navigate = useNavigate();
 
     const [completedQuestions, setCompletedQuestions] = useState({});
@@ -28,14 +28,14 @@ function WriteReview({kp, setKP}) {
     const handleAnswerChange = (questionKey, value, type = 'input') => {
         setCompletedQuestions((prev) => ({
             ...prev,
-            [questionKey]:
-                type === 'checkbox' ? value : (value && value !== '') || false,
+            [questionKey]: type === 'checkbox' ? value : value // Store actual value
         }));
     };
 
     const calculateTotalPoints = () => {
-        return Object.entries(completedQuestions).reduce((total, [key, isCompleted]) => {
-            return isCompleted ? total + (pointsMapping[key] || 0) : total;
+        return Object.entries(completedQuestions).reduce((total, [key, val]) => {
+            // val is truthy if filled, falsy otherwise
+            return val ? total + (pointsMapping[key] || 0) : total;
         }, 0);
     };
 
@@ -43,6 +43,25 @@ function WriteReview({kp, setKP}) {
         event.preventDefault();
         const totalPoints = calculateTotalPoints();
         setKP(kp + totalPoints);
+
+        const classId = completedQuestions.class;
+        const professorName = completedQuestions.professor;
+        
+        const newReview = {
+            id: Date.now(),
+            recommendation: completedQuestions.recommendation || "",
+            pace: completedQuestions.pace || "",
+            difficulty: completedQuestions.difficulty || "",
+            usefulness: completedQuestions.usefulness || "",
+            delivery: completedQuestions.delivery || "",
+            liked: completedQuestions.liked || "",
+            disliked: completedQuestions.disliked || "",
+            grade: completedQuestions.grade || "",
+        };
+
+        // Add the new review to the data structure
+        addReview(classId, professorName, newReview);
+
         navigate('/'); 
     };
 
@@ -92,75 +111,75 @@ function WriteReview({kp, setKP}) {
                         <label for="class-select">Select the class you want to provide information for:</label>
                         <select id="class-select" name="class" onChange={(e) => handleAnswerChange('class', e.target.value) }>
                             <option value="">Select</option>
-                            <option value="selected">Data Structures COMS W3134</option>
-                            <option value="selected">Machine Learning COMS W4771</option>
-                            <option value="selected">Analysis of Algorithms CSOR 4231</option>
-                            <option value="selected">Computer Vision I COMS W4731</option>
+                            <option value="COMS W3134">Data Structures COMS W3134</option>
+                            <option value="COMS W4771">Machine Learning COMS W4771</option>
+                            <option value="CSOR 4231">Analysis of Algorithms CSOR 4231</option>
+                            <option value="COMS W4731">Computer Vision I COMS W4731</option>
                         </select>
 
                         <label>Would you recommend this class?</label>
                         <select onChange={(e) => handleAnswerChange('recommendation', e.target.value) }>
                             <option value="">Select</option>
-                            <option value="selected">Definitely will</option>
-                            <option value="selected">Probably will</option>
-                            <option value="selected">Might or might not</option>
-                            <option value="selected">Probably won't</option>
-                            <option value="selected">Definitely won't</option>
+                            <option value="Definitely will">Definitely will</option>
+                            <option value="Probably will">Probably will</option>
+                            <option value="Might or might not">Might or might not</option>
+                            <option value="Probably won't">Probably won't</option>
+                            <option value="Definitely won't">Definitely won't</option>
                         </select>
 
                         <label>How would you rate the pace of the class?</label>
                         <select onChange={(e) => handleAnswerChange('pace', e.target.value) }>
                             <option value="">Select</option>
-                            <option value="selected">Much too fast</option>
-                            <option value="selected">Slightly too fast</option>
-                            <option value="selected">Just right</option>
-                            <option value="selected">Slightly too slow</option>
-                            <option value="selected">Much too slow</option>
+                            <option value="Much too fast">Much too fast</option>
+                            <option value="Slightly too fast">Slightly too fast</option>
+                            <option value="Just right">Just right</option>
+                            <option value="Slightly too slow">Slightly too slow</option>
+                            <option value="Much too slow">Much too slow</option>
                         </select>
 
                         <label>How challenging did you find this class?</label>
                         <select onChange={(e) => handleAnswerChange('difficulty', e.target.value) }>
                             <option value="">Select</option>
-                            <option value="selected">Extremely challenging</option>
-                            <option value="selected">Very challenging</option>
-                            <option value="selected">Moderately challenging</option>
-                            <option value="selected">Slightly challenging</option>
-                            <option value="selected">Not challenging at all</option>
+                            <option value="Extremely challenging">Extremely challenging</option>
+                            <option value="Very challenging">Very challenging</option>
+                            <option value="Moderately challenging">Moderately challenging</option>
+                            <option value="Slightly challenging">Slightly challenging</option>
+                            <option value="Not challenging at all">Not challenging at all</option>
                         </select>
 
                         <label>How would you rate the usefulness of this class?</label>
                         <select onChange={(e) => handleAnswerChange('usefulness', e.target.value) }>
                             <option value="">Select</option>
-                            <option value="selected">Extremely useful</option>
-                            <option value="selected">Very useful</option>
-                            <option value="selected">Moderately useful</option>
-                            <option value="selected">Slightly useful</option>
-                            <option value="selected">Not useful at all</option>
+                            <option value="Extremely useful">Extremely useful</option>
+                            <option value="Very useful">Very useful</option>
+                            <option value="Moderately useful">Moderately useful</option>
+                            <option value="Slightly useful">Slightly useful</option>
+                            <option value="Not useful at all">Not useful at all</option>
                         </select>
 
                         <label>How would you rate the professor's classroom delivery?</label>
                         <select onChange={(e) => handleAnswerChange('delivery', e.target.value) }>
                             <option value="">Select</option>
-                            <option value="selected">Excellent</option>
-                            <option value="selected">Good</option>
-                            <option value="selected">Fair</option>
-                            <option value="selected">Poor</option>
-                            <option value="selected">Very Poor</option>
+                            <option value="Excellent">Excellent</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                            <option value="Poor">Poor</option>
+                            <option value="Very Poor">Very Poor</option>
                         </select>
 
                         <label>Which professor did you take the class with?</label>
                         <select onChange={(e) => handleAnswerChange('professor', e.target.value) }>
                             <option value="">Select</option>
-                            <option value="selected">Aarushi Sharma</option>
-                            <option value="selected">Brian Borowski</option>
-                            <option value="selected">Daniel Bauer</option>
-                            <option value="selected">Berkan Ottlik</option>
-                            <option value="selected">Daniel Hsu</option>
-                            <option value="selected">Nakul Verma</option>
-                            <option value="selected">Alexandr Andoni</option>
-                            <option value="selected">Christos Papadimitriou</option>
-                            <option value="selected">Eleni Drinea</option>
-                            <option value="selected">Shree Nayar</option>
+                            <option value="Aarushi Sharma">Aarushi Sharma</option>
+                            <option value="Brian Borowski">Brian Borowski</option>
+                            <option value="Daniel Bauer">Daniel Bauer</option>
+                            <option value="Berkan Ottlik">Berkan Ottlik</option>
+                            <option value="Daniel Hsu">Daniel Hsu</option>
+                            <option value="Nakul Verma">Nakul Verma</option>
+                            <option value="Alexandr Andoni">Alexandr Andoni</option>
+                            <option value="Christos Papadimitriou">Christos Papadimitriou</option>
+                            <option value="Eleni Drinea">Eleni Drinea</option>
+                            <option value="Shree Nayar">Shree Nayar</option>
                         </select>
 
                         <label>What aspects of the class did you like the most? (1-3 sentences)</label>
@@ -180,16 +199,16 @@ function WriteReview({kp, setKP}) {
                         <label>What grade did you receive in this class? (This form is strictly anonymous and does not collect personal information)</label>
                         <select onChange={(e) => handleAnswerChange('grade', e.target.value) }>
                             <option value="">Select</option>
-                            <option value="selected">A+</option>
-                            <option value="selected">A</option>
-                            <option value="selected">A-</option>
-                            <option value="selected">B+</option>
-                            <option value="selected">B</option>
-                            <option value="selected">B-</option>
-                            <option value="selected">C+</option>
-                            <option value="selected">C</option>
-                            <option value="selected">C-</option>
-                            <option value="selected">D</option>
+                            <option value="A+">A+</option>
+                            <option value="A">A</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B">B</option>
+                            <option value="B-">B-</option>
+                            <option value="C+">C+</option>
+                            <option value="C">C</option>
+                            <option value="C-">C-</option>
+                            <option value="D">D</option>
                         </select>
 
                         <label>Please upload the class syllabus:</label>

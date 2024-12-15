@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "classId": 101,
+      "className": "CSOR 4231",
+      "professors": [
+        {
+          "profId": 1232134, 
+          "name": "Dr. Alice Smith",
+          "syllabus": {
+            "content": "A json file of the syllabus here",
+            "unlocked": true
+          },
+          "lectureStyle": {
+            "content": {
+              "style": "Lecture-based format using handout slides",
+              "recording": "Yes",
+              "prerequisites": ["COMS W3157 Programming Basics", "COMS 3134 Data structures", "COMS W3203 Discrete Math"]
+            },
+            "unlocked": false
+          },
+          "gradeData": {
+            "content": "A plot saved here",
+            "unlocked": false
+          },
+          "reviews": {
+            "content": [
+              {
+                "id": 1,
+                "recommendation": "Definitely will",
+                "pace": "Much too fast",
+                "difficulty": "Extremely challenging",
+                "usefulness": "Extremely useful",
+                "delivery": "Excellent",
+                "liked": "I like this course a lot",
+                "disliked": "I hate this course",
+                "grade": "A+"
+              }
+            ],
+            "unlocked": false
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -9,6 +9,9 @@ import WriteReview from './WriteReview';
 import ViewInformationClass from './ViewInformationClass.js'
 
 function App() {
+  const initialData = require('./data_json.json');
+
+  const [data, setData] = useState(initialData);
 
   const [karmaPoints, setKarmaPoints] = useState(50);
   return (
@@ -17,7 +20,7 @@ function App() {
         <Route path={"/"} element={<Homepage kp = {karmaPoints}/>} />
       </Routes>
       <Routes>
-        <Route path = {"/classsearch"} element = {<ClassSearch kp = {karmaPoints}/>} />
+        <Route path = {"/classsearch"} element = {<ClassSearch kp = {karmaPoints} data = {data}/>} />
       </Routes>
       <Routes>
         <Route path = {"/classsearch/addclass"} element = {<AddClass kp = {karmaPoints}/>} />

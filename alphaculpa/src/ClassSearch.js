@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import ClassSearchTile from './ClassSearchTile';
 
 
-function ClassSearch({kp}) {
+function ClassSearch({kp, data}) {
   return (
     <div class="container">
         <div class="top-bar">
@@ -27,12 +27,25 @@ function ClassSearch({kp}) {
             
         </div>
         <div class="grid">
-          <ClassSearchTile class_name = "CV 2 Section 1" class_id = "COMS 4731" prof_name = "Carl Vondrick"/>
+
+        {data.map((dataItem, index) => (
+          dataItem.professors.map((professor, profIndex) => (
+            <ClassSearchTile
+              key={`${dataItem.classId}-${profIndex}`}
+              class_name={dataItem.className}
+              class_id={dataItem.classId}
+              prof_name={professor.name}
+            />
+          ))
+        ))}
+
+        
+          {/* <ClassSearchTile class_name = "CV 2 Section 1" class_id = "COMS 4731" prof_name = "Carl Vondrick"/>
           <ClassSearchTile class_name = "CV 1 Section 1" class_id = "COMS todo" prof_name = "Shree Nayar"/>
           <ClassSearchTile class_name = "Class x" class_id = "COMS todo" prof_name = "Pranav"/>
           <ClassSearchTile class_name = "Class y" class_id = "COMS todo" prof_name = "Pranav"/>
           <ClassSearchTile class_name = "Class z" class_id = "COMS todo" prof_name = "Pranav"/>
-          <ClassSearchTile class_name = "class todo" class_id = "COMS todo" prof_name = "Pranav"/>
+          <ClassSearchTile class_name = "class todo" class_id = "COMS todo" prof_name = "Pranav"/> */}
 
         
         </div>

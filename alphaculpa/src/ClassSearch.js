@@ -1,5 +1,8 @@
 import './App.css';
 import './classsearch.css'
+import { Link } from 'react-router-dom';
+
+
 function ClassSearch() {
   return (
     <div class="container">
@@ -9,14 +12,14 @@ function ClassSearch() {
                 Karma Points: 20
             </div>
         </div>
-        <div class="header">
+        <div class="header-class-search">
             <input type="text" placeholder="Class Name" class="search-bar"/>
             <span>
                 <span>
                     Don't see the class you are looking for?
                 </span>
                 
-                <button class="add-class-btn" onclick = "openAddClassPage()">Add a New Class!</button>
+                <Link to ="/classsearch/addclass" class="add-class-btn">Add a New Class!</Link>
             </span>
             
         </div>

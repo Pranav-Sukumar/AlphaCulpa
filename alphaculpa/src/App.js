@@ -1,3 +1,4 @@
+import AddClass from './AddClass';
 import './App.css';
 import ClassSearch from './ClassSearch';
 import Homepage from './Homepage';
@@ -13,6 +14,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path = {"/classsearch"} element = {<ClassSearch/>} />
+      </Routes>
+      <Routes>
+        <Route path = {"/classsearch/addclass"} element = {<AddClass/>} />
       </Routes>
     </Router>
 

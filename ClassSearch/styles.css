@@ -83,7 +83,7 @@ body {
     }
     
     .card-header { 
-        background-color: #b9d9eb; 
+        background-color: #E7F3FF; 
         padding: 15px; 
         font-size: 18px; 
         font-weight: bold; 
@@ -112,4 +112,17 @@ body {
     
     .view-btn:hover { 
         background-color: #030027; 
+    }
+
+    .text-field-style {
+        border-radius: 5px;
+        border-style: solid;
+        font-size: 1em;
+        min-width: 30%;
+        
+    }
+    
+    #teammate-name-text-field{
+        width: 100%;
+        border-color:#c3c3c3;    
     }

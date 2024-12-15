@@ -76,3 +76,23 @@ body {
     background-color: #89A2BF;
   }
   
+
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligns logo to the left and Karma Points to the right */
+    margin-bottom: 20px;
+}
+
+.logo {
+    height: 50px; /* Adjust size as needed */
+    margin-right: 10px;
+}
+
+.karma {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    justify-content: right;
+    font-size: 2em;
+}

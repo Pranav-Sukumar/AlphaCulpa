@@ -5,6 +5,7 @@ import Homepage from './Homepage';
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from
 'react-router-dom';
+import WriteReview from './WriteReview';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
       </Routes>
       <Routes>
         <Route path = {"/classsearch/addclass"} element = {<AddClass/>} />
+      </Routes>
+      <Routes>
+        <Route path = {"/review"} element = {<WriteReview/>} />
       </Routes>
     </Router>
 

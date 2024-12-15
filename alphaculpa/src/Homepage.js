@@ -17,7 +17,7 @@ function Homepage() {
           <p class="subtitle">Columbia’s anonymous professor and course rating site</p>
           <div class="button-group">
             <Link to = "/classsearch" class="action-button">View Classes</Link>
-            <a href="../ReviewPage/review.html" class="action-button">Write a Review</a>
+            <Link to = "/review" class="action-button">Write a Review</Link>
           </div>
         </main>
      </div>

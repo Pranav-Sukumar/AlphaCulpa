@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 function ClassSearch({class_name, class_id, prof_name}) {
+  const path = "/viewclass/" + prof_name
   return (
 
     <div class="card">
@@ -11,7 +12,7 @@ function ClassSearch({class_name, class_id, prof_name}) {
         <div class="card-body">
             <p>{class_id}</p>
             <p>Professor {prof_name}</p>
-            <Link to="/viewclass" class="view-btn">View Information</Link>
+            <Link to={path} class="view-btn">View Information</Link>
         </div>
     </div>
 

@@ -2,8 +2,12 @@ import './App.css';
 import './view_information.css'
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
+import { useParams } from 'react-router';
+
 
 function ViewInformationClass({kp, setKP}) {
+  const { prof_name } = useParams();
+  console.log(prof_name)
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -22,7 +26,7 @@ function ViewInformationClass({kp, setKP}) {
         <div class="coursename-vi">COMS 4731 Computer Vision Ⅱ</div>
         <hr />
         <div class="subinfo-vi">
-          <div class="profname-vi">Professor: Carl Vondrik</div>
+          <div class="profname-vi">Professor: {prof_name}</div>
           <div class="departmentname-vi">Engineering / Computer Science</div>
         </div>
         <hr />

@@ -27,7 +27,7 @@ function App() {
       </Routes>
 
       <Routes>
-        <Route path = {"/viewclass"} element = {<ViewInformationClass kp = {karmaPoints} setKP = {setKarmaPoints}/>} />
+        <Route path = {"/viewclass/:prof_name"} element = {<ViewInformationClass kp = {karmaPoints} setKP = {setKarmaPoints}/>} />
       </Routes>
 
       

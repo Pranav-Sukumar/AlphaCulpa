@@ -6,14 +6,19 @@
         {
           "name": "Shree Nayar",
           "syllabus": {
-            "content": "CV 1 syllabus goes here",
+            "content": {
+              "Topic": "Introductory course in computer vision. Topics include image formation and optics, image sensing, binary images, image processing and filtering, edge extraction and boundary detection, region growing and segmentation, pattern classification methods, brightness and reflectance, shape from shading and photometric stereo, texture, binocular stereo, optical flow and motion, 2D and 3D object representation, object recognition, vision systems and applications.",
+              "Grading": "Midterm 15%, Final 25%, 7 Assignments 60%",
+              "Exam Dates": "Midterm Exam (In-Person): October 17, 10:10AM - 11:25AM (1 hour, 15 mins), Final Exam (In-Person): December 14, 10:00 AM - 1:00 PM (3 Hours)",
+              "Lecture Schedule": "Lecutures available on Youtube for your own pace."
+            },
             "unlocked": true
           },
           "lectureStyle": {
             "content": {
-              "style": "Lecture-based format using handout slides",
+              "style": "Lecture-based format using handout pdf slides",
               "recording": "Yes",
-              "prerequisites": ["COMS W3157 Programming Basics", "COMS 3134 Data structures", "COMS W3203 Discrete Math"]
+              "prerequisites": [" Fundamentals of Linear Algebra", "Fundamentals of Calculus", "Python", "No previous knowledge of Computer Vision is needed."]
             },
             "unlocked": false
           },
@@ -44,20 +49,25 @@
 
 
     {
-      "classId": "COMS W4732",
+      "classId": "CSOR 4231",
       "className": "Computer Vision II",
       "professors": [
         {
-          "name": "Carl Vondrick",
+          "name": "Alexandr Andoni",
           "syllabus": {
-            "content": "CV2 syllabus goes here",
+            "content": {
+              "Topic": "This course covers the basics of the design and analysis of algorithms. We will study general algorithmic techniques such as divide and conquer, greedy algorithms and dynamic programming. We will also discuss some important graph algorithms as well as NP-completeness and techniques for dealing with it. In the process of doing so, we will investigate several important algorithms such as sorting, shortest paths and longest common substrings.",
+              "Grading": "6 Homeworks (35%), Midterm (25%): Oct 23th in-class, Final (40%): finals week",
+              "Exam Dates": "",
+              "Lecture Schedule": "Week 1: Introduction, Strassen's Matrix Multiplication. Week 2: Recurrences, Heapsort, Loop invariants. Week 3: Lower bounds for sorting, Counting Sort, Radix Sort. Week 4: Indicator Random Variables. Week 5: Dynamic Programming. Week 6: Greedy Algorithms. Week 7: Amortized Analysis. Week 8: Midterm. Week 9: Strongly Connected Components, Minimum Spanning Trees, Disjoint Sets. Week 10: All pairs shortest paths. Week 11: NP-completeness. Week 12: Approximation Algorithms."
+            },
             "unlocked": true
           },
           "lectureStyle": {
             "content": {
-              "style": "Lecture-based format using handout slides",
+              "style": "Lecture-based format using handout pdf slides",
               "recording": "Yes",
-              "prerequisites": ["COMS W3157 Programming Basics", "COMS 3134 Data structures", "COMS W3203 Discrete Math", "COMS 4731 Computer Vision I"]
+              "prerequisites": ["COMS W3134 or COMS W3136", "COMS W3203"]
             },
             "unlocked": false
           },

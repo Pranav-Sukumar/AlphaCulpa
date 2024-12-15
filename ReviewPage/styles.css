@@ -52,7 +52,33 @@ body {
 .form-section {
     width: 70%;
     padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Creates spacing between the empty-space and the form-container */
+}
+
+.empty-space {
+    height: 50px; /* Adjust this value to control the height of the empty space */
+}
+
+.karma-indicator {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+}
+
+.form-container {
     background-color: #e7f3ff;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 form {

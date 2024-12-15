@@ -3,13 +3,18 @@ import './writereview.css'
 import { Link } from 'react-router-dom';
 
 
-function WriteReview() {
+function WriteReview({kp, setKP}) {
+    function SubmitButtonPressed(event) {
+        event.preventDefault();
+        setKP(kp + 10)
+    }
+
   return (
     <div class="container_reviewpage">
         <div class="sidebar_reviewpage">
-            <a href="../Homepage/checkpoint4.html">
+            <Link to ="/">
                 <img src={require(`./images/logo.png`)} alt="Logo" class="logo"/>
-            </a>
+            </Link>
             <h2>List of Questions</h2>
             <ul>
                 <li>Class (5 pts)</li>
@@ -29,10 +34,10 @@ function WriteReview() {
         </div>
         <div class="form-section_reviewpage">
             <div class="empty-space_reviewpage">
-                <div class="karma-indicator_reviewpage">20 Karma points</div>
+                <div class="karma-indicator_reviewpage">{kp} Karma points</div>
             </div>
             <div class="form-container_reviewpage">
-                <form action="../Homepage/checkpoint4.html" method="get" class="form_reviewpage">
+                <form action = "/" method="get" class="form_reviewpage" onSubmit={SubmitButtonPressed}>
                     <label for="class-select">Select the class you want to provide information for:</label>
                     <select id="class-select" name="class">
                         <option value="">Select</option>

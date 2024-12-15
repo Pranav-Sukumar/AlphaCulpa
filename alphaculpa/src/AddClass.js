@@ -1,12 +1,16 @@
 import './App.css';
 import './addclass.css'
-function AddClass() {
+import { Link } from 'react-router-dom';
+
+function AddClass({kp}) {
   return (
     <div class="container-add-class">
         <div class="top-bar">
-        <img src={require(`./images/logo.png`)} alt="Logo" class="logo"/>
+            <Link to ="/">
+                <img src={require(`./images/logo.png`)} alt="Logo" class="logo"/>
+            </Link>
             <div class="karma">
-                Karma Points: 20
+                Karma Points: {kp}
             </div>
         </div>
         <div class="form-container">

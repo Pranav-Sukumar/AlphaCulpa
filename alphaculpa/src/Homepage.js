@@ -3,13 +3,15 @@ import './homepage.css'
 
 import { Link } from 'react-router-dom';
 
-function Homepage() {
+function Homepage({kp}) {
   return (
     <div>
       <div class="top-bar">
-        <img src={require(`./images/logo.png`)} alt="Logo" class="logo" />
+            <Link to ="/">
+                <img src={require(`./images/logo.png`)} alt="Logo" class="logo"/>
+            </Link>
       <div class="karma">
-        Karma Points: 20
+        Karma Points: {kp}
       </div>
       </div>
         <main>

@@ -8,19 +8,21 @@ import { BrowserRouter as Router, Routes, Route } from
 import WriteReview from './WriteReview';
 
 function App() {
+
+  const [karmaPoints, setKarmaPoints] = useState(50);
   return (
     <Router>
       <Routes>
-        <Route path={"/"} element={<Homepage/>} />
+        <Route path={"/"} element={<Homepage kp = {karmaPoints}/>} />
       </Routes>
       <Routes>
-        <Route path = {"/classsearch"} element = {<ClassSearch/>} />
+        <Route path = {"/classsearch"} element = {<ClassSearch kp = {karmaPoints}/>} />
       </Routes>
       <Routes>
-        <Route path = {"/classsearch/addclass"} element = {<AddClass/>} />
+        <Route path = {"/classsearch/addclass"} element = {<AddClass kp = {karmaPoints}/>} />
       </Routes>
       <Routes>
-        <Route path = {"/review"} element = {<WriteReview/>} />
+        <Route path = {"/review"} element = {<WriteReview kp = {karmaPoints} setKP = {setKarmaPoints}/>} />
       </Routes>
     </Router>
 

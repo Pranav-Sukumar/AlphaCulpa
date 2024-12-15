@@ -6,6 +6,7 @@ import React, { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from
 'react-router-dom';
 import WriteReview from './WriteReview';
+import ViewInformationClass from './ViewInformationClass.js'
 
 function App() {
 
@@ -24,6 +25,12 @@ function App() {
       <Routes>
         <Route path = {"/review"} element = {<WriteReview kp = {karmaPoints} setKP = {setKarmaPoints}/>} />
       </Routes>
+
+      <Routes>
+        <Route path = {"/viewclass"} element = {<ViewInformationClass kp = {karmaPoints} setKP = {setKarmaPoints}/>} />
+      </Routes>
+
+      
     </Router>
 
     

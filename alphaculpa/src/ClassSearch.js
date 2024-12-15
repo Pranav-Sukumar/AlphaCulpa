@@ -31,7 +31,7 @@ function ClassSearch({kp}) {
                 <div class="card-body">
                     <p>COMS 4731</p>
                     <p>Professor Carl Vondrik</p>
-                    <button class="view-btn" onclick = "openPage()">View Information</button>
+                    <Link to="/viewclass" class="view-btn">View Information</Link>
                 </div>
             </div>
 
@@ -40,7 +40,7 @@ function ClassSearch({kp}) {
                 <div class="card-body">
                     <p>COMS 4731</p>
                     <p>Professor Carl Vondrik</p>
-                    <button class="view-btn" onclick = "openPage()">View Information</button>
+                    <Link to="/viewclass" class="view-btn">View Information</Link>
                 </div>
             </div>
             <div class="card">
@@ -48,7 +48,7 @@ function ClassSearch({kp}) {
                 <div class="card-body">
                     <p>COMS 4731</p>
                     <p>Professor Carl Vondrik</p>
-                    <button class="view-btn" onclick = "openPage()">View Information</button>
+                    <Link to="/viewclass" class="view-btn">View Information</Link>
                 </div>
             </div>
             <div class="card">
@@ -56,7 +56,7 @@ function ClassSearch({kp}) {
                 <div class="card-body">
                     <p>COMS 4731</p>
                     <p>Professor Carl Vondrik</p>
-                    <button class="view-btn" onclick = "openPage()">View Information</button>
+                    <Link to="/viewclass" class="view-btn">View Information</Link>
                 </div>
             </div>
 
@@ -65,7 +65,7 @@ function ClassSearch({kp}) {
                 <div class="card-body">
                     <p>COMS 4731</p>
                     <p>Professor Carl Vondrik</p>
-                    <button class="view-btn" onclick = "openPage()">View Information</button>
+                    <Link to="/viewclass" class="view-btn">View Information</Link>
                 </div>
             </div>
             <div class="card">
@@ -73,7 +73,7 @@ function ClassSearch({kp}) {
                 <div class="card-body">
                     <p>COMS 4731</p>
                     <p>Professor Carl Vondrik</p>
-                    <button class="view-btn" onclick = "openPage()">View Information</button>
+                    <Link to="/viewclass" class="view-btn">View Information</Link>
                 </div>
             </div>
             <div class="card">
@@ -81,7 +81,7 @@ function ClassSearch({kp}) {
                 <div class="card-body">
                     <p>COMS 4731</p>
                     <p>Professor Carl Vondrik</p>
-                    <button class="view-btn" onclick = "openPage()">View Information</button>
+                    <Link to="/viewclass" class="view-btn">View Information</Link>
                 </div>
             </div>
         </div>

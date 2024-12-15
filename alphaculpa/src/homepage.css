@@ -35,7 +35,7 @@ body {
   }
   
   /* Main Content */
-  main {
+  .container-home {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -95,4 +95,40 @@ body {
     align-items: right;
     justify-content: right;
     font-size: 2em;
+}
+
+
+.arrow {
+  width: 80px;
+  height: auto;
+}
+
+.arrow-right {
+  margin-right: 20px;
+  transform: rotate(267deg);
+}
+
+.arrow-left {
+  margin-left: 20px;
+  transform: rotate(92deg) scaleX(-1);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  position: relative;
+}
+
+.button-section {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.button-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
 }

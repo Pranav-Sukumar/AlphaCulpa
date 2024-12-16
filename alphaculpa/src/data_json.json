@@ -38,17 +38,6 @@
                 "liked": "I like this course a lot, Shree gives a structured course, and there are youtube videos online of the course.",
                 "disliked": "Shree doesn't like you being late to class, don't come to class if you are late.",
                 "grade": "A+"
-              },
-              {
-                "id": 2,
-                "recommendation": "",
-                "pace": "Just right",
-                "difficulty": "",
-                "usefulness": "use useful",
-                "delivery": "Bad",
-                "liked": "I like this course a bit,.",
-                "disliked": "I hate it",
-                "grade": "A+"
               }
             ],
             "unlocked": false
@@ -98,17 +87,6 @@
                 "liked": "I like this course a lot",
                 "disliked": "I hate this course",
                 "grade": "A-"
-              },
-              {
-                "id": 1,
-                "recommendation": "Definitely will",
-                "pace": "Much too fast",
-                "difficulty": "Extremely challenging",
-                "usefulness": "Very useful",
-                "delivery": "Fair",
-                "liked": "I liked the projects in this class. Although they were tough, I learned a lot from them",
-                "disliked": "I disliked the timing of the projects and the fact solutions were never released since the projects built on each other",
-                "grade": "A"
               }
             ],
             "unlocked": false

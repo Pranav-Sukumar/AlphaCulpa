@@ -29,6 +29,7 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
   const [syllabus_grading, setSyllabusGrading] = useState("");
   const [syllabus_exam_dates, setSyllabusExam] = useState("");
   const [syllabus_lecture_schedule, setSyllabusLecture] = useState("");
+  const [syllabus_prereq, setSyllabusPrereq] = useState("");
 
   const [pdfLink, setPdfLink] = useState(null);
 
@@ -57,6 +58,10 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
         syllabus_string = ""
         syllabus_string += professor.syllabus.content.LectureSchedule
         setSyllabusLecture(syllabus_string)
+
+        syllabus_string = ""
+        syllabus_string += professor.syllabus.content.prerequisites
+        setSyllabusPrereq(syllabus_string)
       }
       if (professor && professor.lectureStyle) {
         setIsLectureStyleLocked(professor.lectureStyle.unlocked);
@@ -171,6 +176,11 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
                 <b>Lecture Schedule:</b>
                 <br/>
                 {syllabus_lecture_schedule}
+                <br/><br/>
+                <b>Prerequisites:</b>
+                <br/>
+                {syllabus_prereq}
+                
             </div>
           </div>
         </div>

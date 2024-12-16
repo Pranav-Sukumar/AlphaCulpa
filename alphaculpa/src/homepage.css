@@ -137,3 +137,6 @@ body {
   align-items: center;
   width: 300px;
 }
+.button-caption {
+  color:rgb(147, 146, 146);
+}

@@ -12,6 +12,7 @@ function ClassSearch({class_name, class_id, prof_name}) {
         <div class="card-body">
             <p>{class_id}</p>
             <p>Professor {prof_name}</p>
+            <br/>
             <Link to={path} class="view-btn">View Information</Link>
         </div>
     </div>

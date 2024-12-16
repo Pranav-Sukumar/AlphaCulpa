@@ -263,8 +263,10 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
           </div>
           <div class={`section-info-vi ${isGradeDataExpanded ? 'expanded' : ''}`}>
             <div className="description-vi">
-              We have just kicked started the platform and are yet to have statistically significant grade data.
-              Instead we have some faculty data for now...
+              <br/>
+              {/* We have just kicked started the platform and are yet to have statistically significant grade data.
+              Instead we have some faculty data for now... */}
+              Please check out the grade report: 
               {pdfLink && (
                 <a
                   href={pdfLink}
@@ -276,19 +278,20 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
                 </a>
               )}
               {/* Hardcoded grade distribution data histogram (in the future)*/}
+              
               <div class="histogram">
                 <div class="yearterm">
-                  Spring 2024
+                  {/* <br/> */}
                 </div>
                 <div class="placeholder-rectangle">
-                  Available in the future
+                  Grading Plot Coming Soon!
                 </div>
-                <div class="yearterm">
-                  Fall 2023
+                {/* <div class="yearterm"> */}
+                  {/* Fall 2023
                 </div>
                 <div class="placeholder-rectangle">
-                  Available in the future
-                </div>
+                  Coming Soon!
+                </div> */}
               </div>
             </div>
           </div>

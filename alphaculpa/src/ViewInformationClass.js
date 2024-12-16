@@ -275,6 +275,21 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
                   View PDF
                 </a>
               )}
+              {/* Hardcoded grade distribution data histogram (in the future)*/}
+              <div class="histogram">
+                <div class="yearterm">
+                  Spring 2024
+                </div>
+                <div class="placeholder-rectangle">
+                  Available in the future
+                </div>
+                <div class="yearterm">
+                  Fall 2023
+                </div>
+                <div class="placeholder-rectangle">
+                  Available in the future
+                </div>
+              </div>
             </div>
           </div>
         </div>

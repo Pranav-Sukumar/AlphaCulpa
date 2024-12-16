@@ -63,7 +63,7 @@ function App() {
 
   const [karmaPoints, setKarmaPoints] = useState(() => {
     const savedKarma = Cookies.get('karmaPoints');
-    return 50
+    return 150
     return savedKarma ? parseInt(savedKarma, 10) : 50;
   });
 

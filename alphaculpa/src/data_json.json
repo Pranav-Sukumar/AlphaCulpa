@@ -6,19 +6,24 @@
         {
           "name": "Shree Nayar",
           "syllabus": {
-            "content": "CV 1 syllabus goes here",
+            "content": {
+              "Topic": "Introductory course in computer vision. Topics include image formation and optics, image sensing, binary images, image processing and filtering, edge extraction and boundary detection, region growing and segmentation, pattern classification methods, brightness and reflectance, shape from shading and photometric stereo, texture, binocular stereo, optical flow and motion, 2D and 3D object representation, object recognition, vision systems and applications.",
+              "Grading": "Midterm 15%, Final 25%, 7 Assignments 60%",
+              "Exam Dates": "Midterm Exam (In-Person): October 17, 10:10AM - 11:25AM (1 hour, 15 mins), Final Exam (In-Person): December 14, 10:00 AM - 1:00 PM (3 Hours)",
+              "Lecture Schedule": "Lecutures available on Youtube for your own pace."
+            },
             "unlocked": true
           },
           "lectureStyle": {
             "content": {
-              "style": "Lecture-based format using handout slides",
+              "style": "Lecture-based format using handout pdf slides",
               "recording": "Yes",
-              "prerequisites": ["COMS W3157 Programming Basics", "COMS 3134 Data structures", "COMS W3203 Discrete Math"]
+              "prerequisites": [" Fundamentals of Linear Algebra", "Fundamentals of Calculus", "Python", "No previous knowledge of Computer Vision is needed."]
             },
             "unlocked": false
           },
           "gradeData": {
-            "content": "A plot saved here",
+            "content": "./pdfs/4731_SN.pdf",
             "unlocked": false
           },
           "reviews": {
@@ -26,12 +31,12 @@
               {
                 "id": 1,
                 "recommendation": "Definitely will",
-                "pace": "Much too fast",
-                "difficulty": "Extremely challenging",
+                "pace": "Just right",
+                "difficulty": "Slightly challenging",
                 "usefulness": "Extremely useful",
                 "delivery": "Excellent",
-                "liked": "I like this course a lot",
-                "disliked": "I hate this course",
+                "liked": "I like this course a lot, Shree gives a structured course, and there are youtube videos online of the course.",
+                "disliked": "Shree doesn't like you being late to class, don't come to class if you are late.",
                 "grade": "A+"
               }
             ],
@@ -44,25 +49,30 @@
 
 
     {
-      "classId": "COMS W4732",
-      "className": "Computer Vision II",
+      "classId": "COMS 4113",
+      "className": "Fundamentals of Distributed Systems",
       "professors": [
         {
-          "name": "Carl Vondrick",
+          "name": "Roxana Geambasu",
           "syllabus": {
-            "content": "CV2 syllabus goes here",
+            "content": {
+              "Topic": "Distributed systems help programmers aggregate the resources of many networked computers to construct highly available and scalable services. Most of the applications and services we interact with today are distributed, some at enormous scales. This class teaches design and implementation techniques that enable the building of fast, scalable, fault-tolerant distributed systems. Topics include distributed communication models (e.g., sockets, remote procedure calls, distributed shared memory), distributed synchronization (clock synchronization, logical clocks, distributed mutex), distributed file systems, replication, consistency models, fault tolerance, distributed transactions, agreement and commitment, Paxos-based consensus, MapReduce infrastructures, scalable distributed databases. The class combines concepts and algorithms with descriptions of real-world implementations at Google, Facebook, Yahoo, Microsoft, LinkedIn, etc. In addition to lectures, students will get hands-on experience building distributed systems through a series of coding-oriented homeworks. The series, adopted from MIT’s course, implements a fault-tolerant, sharded key/value store.",
+              "Grading": "The grade will be assigned on performance of five homeworks and a final exam. Additionally, a 10% extra credit may be awarded to students with significant and particularly insightful contributions on ED and/or in class throughout the semester. There is no specific number of these awards, but you should think of awardees as people who have stood out consistently and have improved the class in some significant way. Finally, a 10% extra credit is given to students who complete and score perfectly on all eight homework components. The first lecture details the grading procedure, and the Deadlines page specifies the deadlines/dates of each homework/quiz.",
+              "Exam Dates": "",
+              "Lecture Schedule": "Week 1: Course Introduction. Week 2: Distributed Systems Primer. Week 3: Distributed Computation. Week 4: Communication Models. Week 5: Time and Coordination. Week 6: Agreement in Distributed Systems."
+            },
             "unlocked": true
           },
           "lectureStyle": {
             "content": {
-              "style": "Lecture-based format using handout slides",
+              "style": "Lecture-based format using handout pdf slides",
               "recording": "Yes",
-              "prerequisites": ["COMS W3157 Programming Basics", "COMS 3134 Data structures", "COMS W3203 Discrete Math", "COMS 4731 Computer Vision I"]
+              "prerequisites": ["COMS W3137 Data Structures and Algorithms", "COMS W3157 Advanced Programming", "COMS W3827 Fundamentals of Computer Systems", "W4118 Operating Systems is not required, but it is a big plus for your homework assignments"]
             },
             "unlocked": false
           },
           "gradeData": {
-            "content": "A plot saved here",
+            "content": "./pdfs/4113_RG.pdf",
             "unlocked": false
           },
           "reviews": {
@@ -76,7 +86,160 @@
                 "delivery": "Excellent",
                 "liked": "I like this course a lot",
                 "disliked": "I hate this course",
-                "grade": "A+"
+                "grade": "A-"
+              },
+              {
+                "id": 1,
+                "recommendation": "Definitely will",
+                "pace": "Much too fast",
+                "difficulty": "Extremely challenging",
+                "usefulness": "Very useful",
+                "delivery": "Fair",
+                "liked": "I liked the projects in this class. Although they were tough, I learned a lot from them",
+                "disliked": "I disliked the timing of the projects and the fact solutions were never released since the projects built on each other",
+                "grade": "A"
+              }
+            ],
+            "unlocked": false
+          }
+        }
+      ]
+    },
+
+
+    {
+      "classId": "CSOR 4231",
+      "className": "Analysis of Algorithms I",
+      "professors": [
+        {
+          "name": "Alexandr Andoni",
+          "syllabus": {
+            "content": {
+              "Topic": "This course covers the basics of the design and analysis of algorithms. We will study general algorithmic techniques such as divide and conquer, greedy algorithms and dynamic programming. We will also discuss some important graph algorithms as well as NP-completeness and techniques for dealing with it. In the process of doing so, we will investigate several important algorithms such as sorting, shortest paths and longest common substrings.",
+              "Grading": "6 Homeworks (35%), Midterm (25%): Oct 23th in-class, Final (40%): finals week",
+              "Exam Dates": "",
+              "Lecture Schedule": "Week 1: Introduction, Strassen's Matrix Multiplication. Week 2: Recurrences, Heapsort, Loop invariants. Week 3: Lower bounds for sorting, Counting Sort, Radix Sort. Week 4: Indicator Random Variables. Week 5: Dynamic Programming. Week 6: Greedy Algorithms. Week 7: Amortized Analysis. Week 8: Midterm. Week 9: Strongly Connected Components, Minimum Spanning Trees, Disjoint Sets. Week 10: All pairs shortest paths. Week 11: NP-completeness. Week 12: Approximation Algorithms."
+            },
+            "unlocked": true
+          },
+          "lectureStyle": {
+            "content": {
+              "style": "Lecture-based format using handout pdf slides",
+              "recording": "Yes",
+              "prerequisites": ["COMS W3134 or COMS W3136", "COMS W3203"]
+            },
+            "unlocked": false
+          },
+          "gradeData": {
+            "content": "./pdfs/4231_AA.pdf",
+            "unlocked": false
+          },
+          "reviews": {
+            "content": [
+              {
+                "id": 1,
+                "recommendation": "Probably won't",
+                "pace": "Slightly too fast",
+                "difficulty": "Very challenging",
+                "usefulness": "Moderately useful",
+                "delivery": "Fair",
+                "liked": "Everything is just as you expected for algos, no suprises in taking the course.",
+                "disliked": "It is a hard course.",
+                "grade": "B+"
+              }
+            ],
+            "unlocked": false
+          }
+        }
+      ]
+    },
+
+    {
+      "classId": "CSOR 4231",
+      "className": "Analysis of Algorithms I",
+      "professors": [
+        {
+          "name": "Tim Roughgarden",
+          "syllabus": {
+            "content": {
+              "Topic": "This course covers the basics of the design and analysis of algorithms. We will study general algorithmic techniques such as divide and conquer, greedy algorithms and dynamic programming. We will also discuss some important graph algorithms as well as NP-completeness and techniques for dealing with it. In the process of doing so, we will investigate several important algorithms such as sorting, shortest paths and longest common substrings.",
+              "Grading": "6 Homeworks (35%), Midterm (25%): Oct 23th in-class, Final (40%): finals week",
+              "Exam Dates": "",
+              "Lecture Schedule": "Week 1: Introduction, Strassen's Matrix Multiplication. Week 2: Recurrences, Heapsort, Loop invariants. Week 3: Lower bounds for sorting, Counting Sort, Radix Sort. Week 4: Indicator Random Variables. Week 5: Dynamic Programming. Week 6: Greedy Algorithms. Week 7: Amortized Analysis. Week 8: Midterm. Week 9: Strongly Connected Components, Minimum Spanning Trees, Disjoint Sets. Week 10: All pairs shortest paths. Week 11: NP-completeness. Week 12: Approximation Algorithms."
+            },
+            "unlocked": true
+          },
+          "lectureStyle": {
+            "content": {
+              "style": "Writes on the board",
+              "recording": "No",
+              "prerequisites": ["COMS W3134 or COMS W3136", "COMS W3203"]
+            },
+            "unlocked": false
+          },
+          "gradeData": {
+            "content": "./pdfs/4231_AA.pdf",
+            "unlocked": false
+          },
+          "reviews": {
+            "content": [
+              {
+                "id": 1,
+                "recommendation": "Probably won't",
+                "pace": "Slightly too fast",
+                "difficulty": "Very challenging",
+                "usefulness": "Moderately useful",
+                "delivery": "Fair",
+                "liked": "Everything is just as you expected for algos, no suprises in taking the course.",
+                "disliked": "The lectures are not recorded which makes it tough. The professor plugs his own book which is not as good as normal textbooks",
+                "grade": "B+"
+              }
+            ],
+            "unlocked": false
+          }
+        }
+      ]
+    },
+
+    {
+      "classId": "CSEE 4119",
+      "className": "Computer Networks",
+      "professors": [
+        {
+          "name": "Xia Zhou",
+          "syllabus": {
+            "content": {
+              "Topic": "Ever wondered what makes the Internet tick and social networks buzz? Want to gain hands-on experiences of implementing networking protocols and applications? If so, this is the right course for you. This course provides an introduction to computer networks and the technical foundations of the Internet, including applications, protocols, algorithms for routing and transport congestion control, data link and physical layer over wired and wireless medium. We will cover core network layers with a top-down approach, starting from applications we all use every day in order to derive the requirements they place on the network, moving to how the layers below the applications provide these requirements. The course assumes students have background in computer science and/or electrical engineering, but it does not assume background in networks. Laboratory projects are an integral part of the course in which networking concepts are explored in depth.The course breaks down into lectures, assignments, quizzes, written exams, and a course project. The projects will run for the last two weeks of the course. There will be no formal lectures or quizzes during the last two weeks of the course, but only invited talks from guests in the networking industry. The hope is that students can better focus on their group projects and in the meantime learn perspectives from the industry. The projects will be organized around a design review, code review and a final project presentation. ",
+              "Grading": "3 Projects and a Final Exam and Weekly Quizzes",
+              "Exam Dates": "",
+              "Lecture Schedule": "Week 1: Introduction, Strassen's Matrix Multiplication. Week 2: Recurrences, Heapsort, Loop invariants. Week 3: Lower bounds for sorting, Counting Sort, Radix Sort. Week 4: Indicator Random Variables. Week 5: Dynamic Programming. Week 6: Greedy Algorithms. Week 7: Amortized Analysis. Week 8: Midterm. Week 9: Strongly Connected Components, Minimum Spanning Trees, Disjoint Sets. Week 10: All pairs shortest paths. Week 11: NP-completeness. Week 12: Approximation Algorithms."
+            },
+            "unlocked": true
+          },
+          "lectureStyle": {
+            "content": {
+              "style": "Slides",
+              "recording": "Yes",
+              "prerequisites": ["COMS W3134 or COMS W3136", "COMS W3203"]
+            },
+            "unlocked": false
+          },
+          "gradeData": {
+            "content": "",
+            "unlocked": false
+          },
+          "reviews": {
+            "content": [
+              {
+                "id": 1,
+                "recommendation": "Definitely will",
+                "pace": "Just right",
+                "difficulty": "Slightly challenging",
+                "usefulness": "Very useful",
+                "delivery": "Fair",
+                "liked": "I like this course a lot, and Xia is a nice Professor",
+                "disliked": "Project 2 is really tough",
+                "grade": "A"
               }
             ],
             "unlocked": false

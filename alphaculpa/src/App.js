@@ -24,7 +24,12 @@ function App() {
         {
           "name": prof_name,
           "syllabus": {
-            "content": "",
+            "content": {
+              "Topic": "",
+              "Grading": "",
+              "Exam Dates": "",
+              "Lecture Schedule": ""
+            },
             "unlocked": true
           },
           "lectureStyle": {

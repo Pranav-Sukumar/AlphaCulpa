@@ -2,11 +2,12 @@ import AddClass from './AddClass';
 import './App.css';
 import ClassSearch from './ClassSearch';
 import Homepage from './Homepage';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from
 'react-router-dom';
 import WriteReview from './WriteReview';
 import ViewInformationClass from './ViewInformationClass.js'
+import Cookies from 'js-cookie';
 
 function App() {
   const initialData = require('./data_json.json');
@@ -60,7 +61,17 @@ function App() {
     
   }
 
-  const [karmaPoints, setKarmaPoints] = useState(50);
+  const [karmaPoints, setKarmaPoints] = useState(() => {
+    const savedKarma = Cookies.get('karmaPoints');
+    return 50
+    return savedKarma ? parseInt(savedKarma, 10) : 50;
+  });
+
+  useEffect(() => {
+    Cookies.set('karmaPoints', karmaPoints, { expires: 7 }); // Cookie expires in 7 days
+  }, [karmaPoints]);
+
+
 
   const addReview = (classId, professorName, newReview) => {
     const updatedData = data.map(cls => {

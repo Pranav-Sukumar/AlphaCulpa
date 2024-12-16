@@ -264,7 +264,7 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
           <div class={`section-info-vi ${isGradeDataExpanded ? 'expanded' : ''}`}>
             <div className="description-vi">
               We have just kicked started the platform and are yet to have statistically significant grade data.
-              Here is the faculty evaluation data we collected online in place of grade data for now...
+              Instead we have some faculty data for now...
               {pdfLink && (
                 <a
                   href={pdfLink}

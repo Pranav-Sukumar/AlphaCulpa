@@ -150,9 +150,41 @@
             ],
             "unlocked": false
           }
+        },
+        {
+          "name": "Tim Roughgarden",
+          "syllabus": {
+            "content": {
+              "Topic": "This course covers the basics of the design and analysis of algorithms. We will study general algorithmic techniques such as divide and conquer, greedy algorithms and dynamic programming. We will also discuss some important graph algorithms as well as NP-completeness and techniques for dealing with it. In the process of doing so, we will investigate several important algorithms such as sorting, shortest paths and longest common substrings.",
+              "Grading": "6 Homeworks (35%), Midterm (25%): Oct 23th in-class, Final (40%): finals week",
+              "ExamDates": "",
+              "LectureSchedule": "Week 1: Introduction, Strassen's Matrix Multiplication. Week 2: Recurrences, Heapsort, Loop invariants. Week 3: Lower bounds for sorting, Counting Sort, Radix Sort. Week 4: Indicator Random Variables. Week 5: Dynamic Programming. Week 6: Greedy Algorithms. Week 7: Amortized Analysis. Week 8: Midterm. Week 9: Strongly Connected Components, Minimum Spanning Trees, Disjoint Sets. Week 10: All pairs shortest paths. Week 11: NP-completeness. Week 12: Approximation Algorithms."
+            },
+            "unlocked": true
+          },
+          "lectureStyle": {
+            "content": {
+              "style": "Writes on the board",
+              "recording": "No",
+              "prerequisites": ["COMS W3134 or COMS W3136", "COMS W3203"]
+            },
+            "unlocked": false
+          },
+          "gradeData": {
+            "content": "./pdfs/4231_TR.pdf",
+            "unlocked": false
+          },
+          "reviews": {
+            "content": [
+
+            ],
+            "unlocked": false
+          }
         }
       ]
     },
+
+
     {
       "classId": "CSEE 4119",
       "className": "Computer Networks",

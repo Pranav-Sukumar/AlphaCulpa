@@ -16,6 +16,14 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
   const [isGradeDataLocked, setIsGradeDataLocked] = useState(true);
   const [isReviewsDataLocked, setIsReviewsDataLocked] = useState(true);
   
+  const [isSyllabusExpanded, setSyllabusExpanded] = useState(false);
+  const [isLectureStyleExpanded, setLectureStyleExpanded] = useState(false);
+  const [isGradeDataExpanded, setGradeDataExpanded] = useState(false);
+  const [isReviewsExpanded, setReviewsExpanded] = useState(false);
+  const toggleSyllabus = () => setSyllabusExpanded(!isSyllabusExpanded);
+  const toggleLectureStyle = () => setLectureStyleExpanded(!isLectureStyleExpanded);
+  const toggleGradeData = () => setGradeDataExpanded(!isGradeDataExpanded);
+  const toggleReviews = () => setReviewsExpanded(!isReviewsExpanded);
 
   useEffect(() => {
     const classData = data.find(
@@ -39,9 +47,6 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
       }
     }
   }, [class_id, class_name, prof_name, data]);
-
-
-
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
@@ -79,14 +84,18 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
 
   return (
     <div class="container-vi">
+
       <div class="header-vi">
         <Link to="/">
           <img src={require(`./images/logo.png`)} alt="Logo" class="logo" />
         </Link>
         <div class="karma-points-vi">{kp} Karma points</div>
       </div>
+
       <div class="info-vi">
-        <div class="coursename-vi">{class_id} {class_name}</div>
+        <div class="coursename-vi">
+          {class_id} {class_name}
+        </div>
         <hr />
         <div class="subinfo-vi">
           <div class="profname-vi">Professor: {prof_name}</div>
@@ -96,10 +105,13 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
       </div>
 
       <div class="section-all-vi">
+
         {/* Syllabus Section */}
         <div class="section-container-vi">
           <div class="section-vi">
-            <div class="sectionname-vi">Syllabus</div>
+            <div class="sectionname-vi">
+              Syllabus
+            </div>
             <div class="right-vi">
               <button 
                 class={`view-btn-vi ${isExpanded ? 'active' : ''}`}
@@ -120,69 +132,104 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
             </div>
           </div>
         </div>
-
+        
         {/* Lecture Style Section - Always Collapsed */}
         <div class="section-container-vi">
           <div class="section-vi">
             <div class="sectionname-vi">Lecture Style</div>
             <div class="right-vi">
-              <button class="purchase-btn-vi" onClick={() => unlock(10, 0)}>PURCHASE FOR 10 POINTS</button>
+              {isLectureStyleLocked ? (
+                <button 
+                  class={`view-btn-vi ${isLectureStyleExpanded ? 'active' : ''}`}
+                  onClick={toggleLectureStyle}
+                >
+                  {isLectureStyleExpanded ? 'CLOSE' : 'VIEW'}
+                </button>
+              ) : (
+                <button class="purchase-btn-vi" onClick={() => unlock(10, 0)}>
+                  PURCHASE FOR 10 POINTS
+                </button>
+              )}
               <img 
                 class="lockimage-vi" 
                 src={require(`./images/${isLectureStyleLocked ? 'unlock.png' : 'lock.png'}`)} 
                 alt={isLectureStyleLocked ? "Unlock Image" : "Lock Image"} 
-                />
+              />
             </div>
           </div>
-          <div class="section-info-vi">
-            <div class="description-vi" style={{ display: 'none' }}>
-              syllabus info
+          <div class={`section-info-vi ${isLectureStyleExpanded ? 'expanded' : ''}`}>
+            <div class="description-vi">
+              lecture style info
             </div>
           </div>
         </div>
 
-        {/* Grade Data Section - Always Collapsed */}
+        {/* Grade Data Section */}
         <div class="section-container-vi">
           <div class="section-vi">
             <div class="sectionname-vi">Grade Data</div>
             <div class="right-vi">
-              <button class="purchase-btn-vi" onClick={() => unlock(50, 1)}>PURCHASE FOR 50 POINTS</button>
+              {isGradeDataLocked ? (
+                <button 
+                  class={`view-btn-vi ${isGradeDataExpanded ? 'active' : ''}`}
+                  onClick={toggleGradeData}
+                >
+                  {isGradeDataExpanded ? 'CLOSE' : 'VIEW'}
+                </button>
+              ) : (
+                <button class="purchase-btn-vi" onClick={() => unlock(50, 1)}>
+                  PURCHASE FOR 50 POINTS
+                </button>
+              )}
               <img 
                 class="lockimage-vi" 
                 src={require(`./images/${isGradeDataLocked ? 'unlock.png' : 'lock.png'}`)} 
                 alt={isGradeDataLocked ? "Unlock Image" : "Lock Image"} 
-                />
+              />
             </div>
           </div>
-          <div class="section-info-vi">
-            <div class="description-vi" style={{ display: 'none' }}>
-              syllabus info
+          <div class={`section-info-vi ${isGradeDataExpanded ? 'expanded' : ''}`}>
+            <div class="description-vi">
+              grade data info
             </div>
           </div>
         </div>
 
-        {/* Reviews Section - Always Collapsed */}
+        {/* Reviews Section */}
         <div class="section-container-vi">
           <div class="section-vi">
             <div class="sectionname-vi">Reviews</div>
             <div class="right-vi">
-              <button class="purchase-btn-vi" onClick={() => unlock(30, 2)} >PURCHASE FOR 30 POINTS</button>
+              {isReviewsDataLocked ? (
+                <button 
+                  class={`view-btn-vi ${isReviewsExpanded ? 'active' : ''}`}
+                  onClick={toggleReviews}
+                >
+                  {isReviewsExpanded ? 'CLOSE' : 'VIEW'}
+                </button>
+              ) : (
+                <button class="purchase-btn-vi" onClick={() => unlock(30, 2)}>
+                  PURCHASE FOR 30 POINTS
+                </button>
+              )}
               <img 
                 class="lockimage-vi" 
                 src={require(`./images/${isReviewsDataLocked ? 'unlock.png' : 'lock.png'}`)} 
                 alt={isReviewsDataLocked ? "Unlock Image" : "Lock Image"} 
-                />
+              />
             </div>
           </div>
-          <div class="section-info-vi">
-            <div class="description-vi" style={{ display: 'none' }}>
-              syllabus info
+          <div class={`section-info-vi ${isReviewsExpanded ? 'expanded' : ''}`}>
+            <div class="description-vi">
+              reviews info
             </div>
           </div>
         </div>
+
+        
       </div>
+
     </div>
   );
 }
-
 export default ViewInformationClass;

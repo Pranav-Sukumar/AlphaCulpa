@@ -1,0 +1,20 @@
+{
+  "sections": [
+      {
+          "name": "Syllabus",
+          "description": "syllabus info"
+      },
+      {
+          "name": "Lecture Style",
+          "description": "lecture-style info"
+      },
+      {
+          "name": "Grade Data",
+          "description": "grade info"
+      },
+      {
+          "name": "Reviews",
+          "description": "review info"
+      }
+  ]
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Feedback Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="body_reviewpage">
+    <div class="container_reviewpage">
+        <div class="sidebar_reviewpage">
+            <a href="../Homepage/checkpoint4.html">
+                <img src="logo.png" alt="Logo" class="logo_reviewpage">
+            </a>
+            <h2>List of Questions</h2>
+            <ul>
+                <li>Class (5 pts)</li>
+                <li>Overall Recommendation (5 pts)</li>
+                <li>Pace (5 pts)</li>
+                <li>Difficulty (5 pts)</li>
+                <li>Usefulness (5 pts)</li>
+                <li>Classroom Delivery (5 pts)</li>
+                <li>Professor (5 pts)</li>
+                <li>Things You Liked (10 pts)</li>
+                <li>Things You Disliked (10 pts)</li>
+                <li>Lecture Recording (5 pts)</li>
+                <li>Prerequisites (5 pts)</li>
+                <li>Grade (30 pts)</li>
+                <li>Syllabus (10 pts)</li>
+            </ul>
+        </div>
+        <div class="form-section_reviewpage">
+            <div class="empty-space_reviewpage">
+                <div class="karma-indicator_reviewpage">20 Karma points</div>
+            </div>
+            <div class="form-container_reviewpage">
+                <form action="../Homepage/checkpoint4.html" method="get" class="form_reviewpage">
+                    <label for="class-select">Select the class you want to provide information for:</label>
+                    <select id="class-select" name="class">
+                        <option value="">Select</option>
+                        <option value="">Data Structures COMS W3134</option>
+                        <option value="">Machine Learning COMS W4771</option>
+                        <option value="">Analysis of Algorithms CSOR 4231</option>
+                        <option value="">Computer Vision I COMS W4731</option>
+                    </select>
+
+                    <label>Would you recommend this class?</label>
+                    <select>
+                        <option value="">Select</option>
+                        <option value="">Definitely will</option>
+                        <option value="">Probably will</option>
+                        <option value="">Might or might not</option>
+                        <option value="">Probably won't</option>
+                        <option value="">Definitely won't</option>
+                    </select>
+
+                    <label>How would you rate the pace of the class?</label>
+                    <select>
+                        <option value="">Select</option>
+                        <option value="">Much too fast</option>
+                        <option value="">Slightly too fast</option>
+                        <option value="">Just right</option>
+                        <option value="">Slightly too slow</option>
+                        <option value="">Much too slow</option>
+                    </select>
+
+                    <label>How challenging did you find this class?</label>
+                    <select>
+                        <option value="">Select</option>
+                        <option value="">Extremely challenging</option>
+                        <option value="">Very challenging</option>
+                        <option value="">Moderately challenging</option>
+                        <option value="">Slightly challenging</option>
+                        <option value="">Not challenging at all</option>
+                    </select>
+
+                    <label>How would you rate the usefulness of this class?</label>
+                    <select>
+                        <option value="">Select</option>
+                        <option value="">Extremely useful</option>
+                        <option value="">Very useful</option>
+                        <option value="">Moderately useful</option>
+                        <option value="">Slightly useful</option>
+                        <option value="">Not useful at all</option>
+                    </select>
+
+                    <label>How would you rate the professor's classroom delivery?</label>
+                    <select>
+                        <option value="">Select</option>
+                        <option value="">Excellent</option>
+                        <option value="">Good</option>
+                        <option value="">Fair</option>
+                        <option value="">Poor</option>
+                        <option value="">Very Poor</option>
+                    </select>
+
+                    <label>Which professor did you take the class with?</label>
+                    <select>
+                        <option value="">Select</option>
+                        <option value="">Aarushi Sharma</option>
+                        <option value="">Brian Borowski</option>
+                        <option value="">Daniel Bauer</option>
+                        <option value="">Berkan Ottlik</option>
+                        <option value="">Daniel Hsu</option>
+                        <option value="">Nakul Verma</option>
+                        <option value="">Alexandr Andoni</option>
+                        <option value="">Christos Papadimitriou</option>
+                        <option value="">Eleni Drinea</option>
+                        <option value="">Shree Nayar</option>
+                    </select>
+
+                    <label>What aspects of the class did you like the most? (1-3 sentences)</label>
+                    <textarea rows="3"></textarea>
+
+                    <label>What aspects of the class did you find least enjoyable? (1-3 sentences)</label>
+                    <textarea rows="3"></textarea>
+
+                    <div class="checkbox-group_reviewpage">
+                        <label for="lectures-recorded">Are the lectures recorded?</label>
+                        <input type="checkbox" id="lectures-recorded" name="lectures-recorded">
+                    </div>
+
+                    <label>What prerequisites would you recommend? (Enter "none" if not applicable)</label>
+                    <textarea rows="2"></textarea>
+
+                    <label>What grade did you receive in this class? (This form is strictly anonymous and does not collect personal information)</label>
+                    <select>
+                        <option value="">Select</option>
+                        <option value="">A+</option>
+                        <option value="">A</option>
+                        <option value="">A-</option>
+                        <option value="">B+</option>
+                        <option value="">B</option>
+                        <option value="">B-</option>
+                        <option value="">C+</option>
+                        <option value="">C</option>
+                        <option value="">C-</option>
+                        <option value="">D</option>
+                    </select>
+
+                    <label>Please upload the class syllabus:</label>
+                    <input type="file">
+
+                    <button type="submit" class="button_reviewpage">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

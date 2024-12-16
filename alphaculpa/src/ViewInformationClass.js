@@ -25,6 +25,11 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
   const toggleGradeData = () => setGradeDataExpanded(!isGradeDataExpanded);
   const toggleReviews = () => setReviewsExpanded(!isReviewsExpanded);
 
+  const [syllabus_topic, setSyllabusTopic] = useState("");
+  const [syllabus_grading, setSyllabusGrading] = useState("");
+  const [syllabus_exam_dates, setSyllabusExam] = useState("");
+  const [syllabus_lecture_schedule, setSyllabusLecture] = useState("");
+
   useEffect(() => {
     const classData = data.find(
       (item) => item.classId === class_id && item.className === class_name
@@ -35,6 +40,21 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
 
       if (professor && professor.syllabus) {
         setIsSyllabusLocked(professor.syllabus.unlocked);
+        let syllabus_string = ""
+        syllabus_string += professor.syllabus.content.Topic
+        setSyllabusTopic(syllabus_string)
+
+        syllabus_string = ""
+        syllabus_string += professor.syllabus.content.Grading
+        setSyllabusGrading(syllabus_string)
+
+        syllabus_string = ""
+        syllabus_string += professor.syllabus.content.ExamDates
+        setSyllabusExam(syllabus_string)
+
+        syllabus_string = ""
+        syllabus_string += professor.syllabus.content.LectureSchedule
+        setSyllabusLecture(syllabus_string)
       }
       if (professor && professor.lectureStyle) {
         setIsLectureStyleLocked(professor.lectureStyle.unlocked);
@@ -45,6 +65,7 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
       if (professor && professor.reviews) {
         setIsReviewsDataLocked(professor.reviews.unlocked);
       }
+
     }
   }, [class_id, class_name, prof_name, data]);
 
@@ -128,7 +149,21 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
           </div>
           <div class={`section-info-vi ${isExpanded ? 'expanded' : ''}`}>
             <div class="description-vi">
-              syllabus info
+                <b>Topic:</b>
+                <br/>
+                {syllabus_topic}
+                <br/><br/>
+                <b>Grading:</b>
+                <br/>
+                {syllabus_grading}
+                <br/><br/>
+                <b>Exam Dates:</b>
+                <br/>
+                {syllabus_exam_dates}
+                <br/><br/>
+                <b>Lecture Schedule:</b>
+                <br/>
+                {syllabus_lecture_schedule}
             </div>
           </div>
         </div>

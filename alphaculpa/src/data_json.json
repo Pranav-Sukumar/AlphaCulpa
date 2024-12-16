@@ -1,6 +1,6 @@
 [
     {
-      "classId": "COMS W4731",
+      "classId": "COMS 4731",
       "className": "Computer Vision I",
       "professors": [
         {
@@ -11,7 +11,7 @@
               "Grading": "Midterm 15%, Final 25%, 7 Assignments 60%",
               "ExamDates": "Midterm Exam (In-Person): October 17, 10:10AM - 11:25AM (1 hour, 15 mins), Final Exam (In-Person): December 14, 10:00 AM - 1:00 PM (3 Hours)",
               "LectureSchedule": "Lecutures available on Youtube for your own pace.",
-              "prerequisites": [" Fundamentals of Linear Algebra", "Fundamentals of Calculus", "Python", "No previous knowledge of Computer Vision is needed."]
+              "prerequisites": " Fundamentals of Linear Algebra, Fundamentals of Calculus, Python, No previous knowledge of Computer Vision is needed."
             },
             "unlocked": true
           },
@@ -60,7 +60,7 @@
               "Grading": "The grade will be assigned on performance of five homeworks and a final exam. Additionally, a 10% extra credit may be awarded to students with significant and particularly insightful contributions on ED and/or in class throughout the semester. There is no specific number of these awards, but you should think of awardees as people who have stood out consistently and have improved the class in some significant way. Finally, a 10% extra credit is given to students who complete and score perfectly on all eight homework components. The first lecture details the grading procedure, and the Deadlines page specifies the deadlines/dates of each homework/quiz.",
               "ExamDates": "",
               "LectureSchedule": "Week 1: Course Introduction. Week 2: Distributed Systems Primer. Week 3: Distributed Computation. Week 4: Communication Models. Week 5: Time and Coordination. Week 6: Agreement in Distributed Systems.",
-              "prerequisites": ["COMS W3137 Data Structures and Algorithms", "COMS W3157 Advanced Programming", "COMS W3827 Fundamentals of Computer Systems", "W4118 Operating Systems is not required, but it is a big plus for your homework assignments"]
+              "prerequisites": "COMS W3137 Data Structures and Algorithms, COMS W3157 Advanced Programming, COMS W3827 Fundamentals of Computer Systems, W4118 Operating Systems is not required, but it is a big plus for your homework assignments"
             },
             "unlocked": true
           },
@@ -108,7 +108,7 @@
               "Grading": "6 Homeworks (35%), Midterm (25%): Oct 23th in-class, Final (40%): finals week",
               "ExamDates": "",
               "LectureSchedule": "Week 1: Introduction, Strassen's Matrix Multiplication. Week 2: Recurrences, Heapsort, Loop invariants. Week 3: Lower bounds for sorting, Counting Sort, Radix Sort. Week 4: Indicator Random Variables. Week 5: Dynamic Programming. Week 6: Greedy Algorithms. Week 7: Amortized Analysis. Week 8: Midterm. Week 9: Strongly Connected Components, Minimum Spanning Trees, Disjoint Sets. Week 10: All pairs shortest paths. Week 11: NP-completeness. Week 12: Approximation Algorithms.",
-              "prerequisites": ["COMS W3134 or COMS W3136", "COMS W3203"]
+              "prerequisites": "COMS W3134 or COMS W3136, and COMS W3203"
             },
             "unlocked": true
           },
@@ -148,7 +148,7 @@
               "Grading": "",
               "ExamDates": "",
               "LectureSchedule": "Week 1: Introduction, Strassen's Matrix Multiplication. Week 2: Recurrences, Heapsort, Loop invariants. Week 3: Lower bounds for sorting, Counting Sort, Radix Sort. Week 4: Indicator Random Variables. Week 5: Dynamic Programming. Week 6: Greedy Algorithms. Week 7: Amortized Analysis. Week 8: Midterm. Week 9: Strongly Connected Components, Minimum Spanning Trees, Disjoint Sets. Week 10: All pairs shortest paths. Week 11: NP-completeness. Week 12: Approximation Algorithms.",
-              "prerequisites": ["COMS W3134 or COMS W3136", "COMS W3203"]
+              "prerequisites": "COMS W3134 or COMS W3136, and COMS W3203"
             },
             "unlocked": true
           },
@@ -178,7 +178,7 @@
               "Grading": "",
               "ExamDates": "",
               "LectureSchedule": "Week 1: Introduction, Strassen's Matrix Multiplication. Week 2: Recurrences, Heapsort, Loop invariants. Week 3: Lower bounds for sorting, Counting Sort, Radix Sort. Week 4: Indicator Random Variables. Week 5: Dynamic Programming. Week 6: Greedy Algorithms. Week 7: Amortized Analysis. Week 8: Midterm. Week 9: Strongly Connected Components, Minimum Spanning Trees, Disjoint Sets. Week 10: All pairs shortest paths. Week 11: NP-completeness. Week 12: Approximation Algorithms.",
-              "prerequisites": ["COMS W3134 or COMS W3136", "COMS W3203"]
+              "prerequisites": "COMS W3134 or COMS W3136, and COMS W3203"
             },
             "unlocked": true
           },
@@ -208,7 +208,7 @@
               "Grading": "",
               "ExamDates": "",
               "LectureSchedule": "Week 1: Introduction, Strassen's Matrix Multiplication. Week 2: Recurrences, Heapsort, Loop invariants. Week 3: Lower bounds for sorting, Counting Sort, Radix Sort. Week 4: Indicator Random Variables. Week 5: Dynamic Programming. Week 6: Greedy Algorithms. Week 7: Amortized Analysis. Week 8: Midterm. Week 9: Strongly Connected Components, Minimum Spanning Trees, Disjoint Sets. Week 10: All pairs shortest paths. Week 11: NP-completeness. Week 12: Approximation Algorithms.",
-              "prerequisites": ["COMS W3134 or COMS W3136", "COMS W3203"]
+              "prerequisites": "COMS W3134 or COMS W3136, and COMS W3203"
             },
             "unlocked": true
           },
@@ -238,7 +238,7 @@
               "Grading": "",
               "ExamDates": "",
               "LectureSchedule": "Week 1: Introduction, Strassen's Matrix Multiplication. Week 2: Recurrences, Heapsort, Loop invariants. Week 3: Lower bounds for sorting, Counting Sort, Radix Sort. Week 4: Indicator Random Variables. Week 5: Dynamic Programming. Week 6: Greedy Algorithms. Week 7: Amortized Analysis. Week 8: Midterm. Week 9: Strongly Connected Components, Minimum Spanning Trees, Disjoint Sets. Week 10: All pairs shortest paths. Week 11: NP-completeness. Week 12: Approximation Algorithms.",
-              "prerequisites": ["COMS W3134 or COMS W3136", "COMS W3203"]
+              "prerequisites": "COMS W3134 or COMS W3136, and COMS W3203"
             },
             "unlocked": true
           },
@@ -277,7 +277,7 @@
               "Grading": "3 Projects and a Final Exam and Weekly Quizzes",
               "ExamDates": "",
               "LectureSchedule": "Week 1: Introduction, Strassen's Matrix Multiplication. Week 2: Recurrences, Heapsort, Loop invariants. Week 3: Lower bounds for sorting, Counting Sort, Radix Sort. Week 4: Indicator Random Variables. Week 5: Dynamic Programming. Week 6: Greedy Algorithms. Week 7: Amortized Analysis. Week 8: Midterm. Week 9: Strongly Connected Components, Minimum Spanning Trees, Disjoint Sets. Week 10: All pairs shortest paths. Week 11: NP-completeness. Week 12: Approximation Algorithms.",
-              "prerequisites": ["COMS W3134 or COMS W3136", "COMS W3203"]
+              "prerequisites": "COMS W3134 or COMS W3136, and COMS W3203"
             },
             "unlocked": true
           },
@@ -305,6 +305,113 @@
                 "disliked": "Project 2 is really tough",
                 "grade": "A"
               }
+            ],
+            "unlocked": false
+          }
+        }
+      ]
+    },
+
+    {
+      "classId": "COMS 4771",
+      "className": "Machine Learning",
+      "professors": [
+        {
+          "name": "Nakul Verma",
+          "syllabus": {
+            "content": {
+              "Topic": "COMS 4771 is a graduate-level introduction to machine learning. The course covers basic statistical principles of supervised machine learning, as well as some common algorithmic paradigms.",
+              "Grading": "Homeworks (for practice only, fully optional, 0%), Exam #1 (33.3%), Exam #2 (33.3%), Exam #3 (33.3%)",
+              "ExamDates": "",
+              "LectureSchedule": "https://www.cs.columbia.edu/~verma/classes/ml/index.html",
+              "prerequisites": "Applied Probability, COMS W3203, Linear Algebra, Multivariate Calculus, Mathematical maturity"
+            },
+            "unlocked": true
+          },
+          "lectureStyle": {
+            "content": {
+              "style": "Slides",
+              "recording": "Yes"
+            },
+            "unlocked": false
+          },
+          "gradeData": {
+            "content": "./pdfs/4771_NV.pdf",
+            "unlocked": false
+          },
+          "reviews": {
+            "content": [
+              {
+                "id": 1,
+                "recommendation": "Definitely won't",
+                "pace": "Slightly too fast",
+                "difficulty": "Extremely challenging",
+                "usefulness": "Not useful at all",
+                "delivery": "Very Poor",
+                "liked": "Absolutely nothing",
+                "disliked": "Everything",
+                "grade": ""
+              }
+            ],
+            "unlocked": false
+          }
+        },
+        {
+          "name": "Daniel Hsu",
+          "syllabus": {
+            "content": {
+              "Topic": "COMS 4771 is a graduate-level introduction to machine learning. The course covers basic statistical principles of supervised machine learning, as well as some common algorithmic paradigms.",
+              "Grading": "Homeworks (for practice only, fully optional, 0%), Exam #1 (33.3%), Exam #2 (33.3%), Exam #3 (33.3%)",
+              "ExamDates": "",
+              "LectureSchedule": "https://www.cs.columbia.edu/~djhsu/coms4771-f23/",
+              "prerequisites": "Applied Probability, COMS W3203, Linear Algebra, Multivariate Calculus, Mathematical maturity"
+            },
+            "unlocked": true
+          },
+          "lectureStyle": {
+            "content": {
+              "style": "Slides",
+              "recording": "Yes"
+            },
+            "unlocked": false
+          },
+          "gradeData": {
+            "content": "./pdfs/4771_DH.pdf",
+            "unlocked": false
+          },
+          "reviews": {
+            "content": [
+
+            ],
+            "unlocked": false
+          }
+        },
+        {
+          "name": "Berkan Ottlik",
+          "syllabus": {
+            "content": {
+              "Topic": "COMS 4771 is a graduate-level introduction to machine learning. The course covers basic statistical principles of supervised machine learning, as well as some common algorithmic paradigms.",
+              "Grading": "Homeworks (for practice only, fully optional, 0%), Exam #1 (33.3%), Exam #2 (33.3%), Exam #3 (33.3%)",
+              "ExamDates": "",
+              "LectureSchedule": "",
+              "prerequisites": "Applied Probability, COMS W3203, Linear Algebra, Multivariate Calculus, Mathematical maturity"
+            },
+            "unlocked": true
+          },
+          "lectureStyle": {
+            "content": {
+              "style": "Slides",
+              "recording": "Yes"
+            },
+            "unlocked": false
+          },
+          "gradeData": {
+            "content": "./pdfs/4771_BO.pdf",
+            "unlocked": false
+          },
+          "reviews": {
+            "content": [
+
             ],
             "unlocked": false
           }

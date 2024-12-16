@@ -106,7 +106,7 @@ function WriteReview({kp, setKP, addReview, getAvailableClasses}) {
             </div>
             <div className="form-section_reviewpage">
                 <div className="empty-space_reviewpage">
-                    <div className="karma-indicator_reviewpage">{kp} Karma points</div>
+                    <div className="karma-indicator_reviewpage">Karma Points: {kp}</div>
                 </div>
                 <div className="form-container_reviewpage">
                     <form action = "/" method="get" className="form_reviewpage" onSubmit={SubmitButtonPressed}>

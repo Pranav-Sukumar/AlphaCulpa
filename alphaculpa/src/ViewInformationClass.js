@@ -31,7 +31,12 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
   const [syllabus_lecture_schedule, setSyllabusLecture] = useState("");
   const [syllabus_prereq, setSyllabusPrereq] = useState("");
 
+  const [lecture_style, setLectureStyle] = useState("");
+  const [lecture_recording, setLectureRecording] = useState("");
+
   const [pdfLink, setPdfLink] = useState(null);
+
+  const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     const classData = data.find(
@@ -65,6 +70,13 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
       }
       if (professor && professor.lectureStyle) {
         setIsLectureStyleLocked(professor.lectureStyle.unlocked);
+        let lecture_string = ""
+        lecture_string += professor.lectureStyle.content.style
+        setLectureStyle(lecture_string)
+
+        lecture_string = ""
+        lecture_string += professor.lectureStyle.content.recording
+        setLectureRecording(lecture_string)
       }
       if (professor && professor.gradeData) {
         setIsGradeDataLocked(professor.gradeData.unlocked);
@@ -76,6 +88,9 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
       }
       if (professor && professor.reviews) {
         setIsReviewsDataLocked(professor.reviews.unlocked);
+        if (professor.reviews.content && Array.isArray(professor.reviews.content)) {
+          setReviews(professor.reviews.content);
+        }
       }
 
     }
@@ -122,7 +137,7 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
         <Link to="/">
           <img src={require(`./images/logo.png`)} alt="Logo" class="logo" />
         </Link>
-        <div class="karma-points-vi">{kp} Karma points</div>
+        <div class="karma-points-vi">Karma Points: {kp}</div>
       </div>
 
       <div class="info-vi">
@@ -211,7 +226,13 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
           </div>
           <div class={`section-info-vi ${isLectureStyleExpanded ? 'expanded' : ''}`}>
             <div class="description-vi">
-              lecture style info
+                <b>Style:</b>
+                <br/>
+                {lecture_style}
+                <br/><br/>
+                <b>Recording Available:</b>
+                <br/>
+                {lecture_recording}
             </div>
           </div>
         </div>
@@ -283,8 +304,29 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
             </div>
           </div>
           <div class={`section-info-vi ${isReviewsExpanded ? 'expanded' : ''}`}>
-            <div class="description-vi">
-              reviews info
+            <div className="description-vi">
+              {/* Only show reviews if expanded and unlocked */}
+              {isReviewsExpanded && isReviewsDataLocked && (
+                reviews && reviews.length > 0 ? (
+                  reviews.map((review, index) => (
+                    <div className="review-box" key={review.id || index}>
+                      <div className="review-line"><strong>ID:</strong> {review.id}</div>
+                      <div className="review-line"><strong>Recommendation:</strong> {review.recommendation}</div>
+                      <div className="review-line"><strong>Pace:</strong> {review.pace}</div>
+                      <div className="review-line"><strong>Difficulty:</strong> {review.difficulty}</div>
+                      <div className="review-line"><strong>Usefulness:</strong> {review.usefulness}</div>
+                      <div className="review-line"><strong>Delivery:</strong> {review.delivery}</div>
+                      <div className="review-line"><strong>Liked:</strong> {review.liked}</div>
+                      <div className="review-line"><strong>Disliked:</strong> {review.disliked}</div>
+                      <div className="review-line"><strong>Grade:</strong> {review.grade}</div>
+                    </div>
+                  ))
+                ) : (
+                  <div className="review-box">
+                    <div className="review-line">No reviews</div>
+                  </div>
+                )
+              )}
             </div>
           </div>
         </div>

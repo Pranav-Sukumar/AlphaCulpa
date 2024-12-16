@@ -128,3 +128,25 @@ height: 24px;
     border-radius: 5px; 
 
 }
+
+.review-box {
+    background-color: #F9FAFB; /* Light background to distinguish each review */
+    border: 1px solid #CCC; /* Subtle border */
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px; /* Space out each review box */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.review-line {
+    margin-bottom: 5px; /* Space between each field */
+    font-size: 16px;
+    color: black;
+}
+
+/* Emphasize the field labels */
+.review-line strong {
+    display: inline-block;
+    min-width: 200px; /* Ensures labels are aligned and separated from values */
+    color: #000; 
+}

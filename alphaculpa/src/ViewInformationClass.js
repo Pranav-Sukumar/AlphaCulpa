@@ -30,6 +30,8 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
   const [syllabus_exam_dates, setSyllabusExam] = useState("");
   const [syllabus_lecture_schedule, setSyllabusLecture] = useState("");
 
+  const [pdfLink, setPdfLink] = useState(null);
+
   useEffect(() => {
     const classData = data.find(
       (item) => item.classId === class_id && item.className === class_name
@@ -61,6 +63,11 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
       }
       if (professor && professor.gradeData) {
         setIsGradeDataLocked(professor.gradeData.unlocked);
+
+        if (professor.gradeData.content) {
+          const loadedPdf = require(`${professor.gradeData.content}`);
+          setPdfLink(loadedPdf);
+        }
       }
       if (professor && professor.reviews) {
         setIsReviewsDataLocked(professor.reviews.unlocked);
@@ -224,8 +231,19 @@ function ViewInformationClass({kp, setKP, data,unlockLectureStyle, unlockGrade, 
             </div>
           </div>
           <div class={`section-info-vi ${isGradeDataExpanded ? 'expanded' : ''}`}>
-            <div class="description-vi">
-              grade data info
+            <div className="description-vi">
+              We have just kicked started the platform and are yet to have statistically significant grade data.
+              Here is the faculty evaluation data we collected online in place of grade data for now...
+              {pdfLink && (
+                <a
+                  href={pdfLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ marginLeft: '5px', textDecoration: 'underline' }}
+                >
+                  View PDF
+                </a>
+              )}
             </div>
           </div>
         </div>
